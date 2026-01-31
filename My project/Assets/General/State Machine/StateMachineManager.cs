@@ -2,7 +2,22 @@ using UnityEngine;
 
 public class StateMachineManager : MonoBehaviour
 {
-    public State currentState;
+    public static StateMachineManager Instance;
+    public State tutorialState;
+    [HideInInspector] public State currentState;
+
+
+    public void Awake()
+    {
+        if (Instance == null)
+        {
+            Instance = this;
+            currentState = tutorialState;
+        } else
+        {
+            Destroy(gameObject);
+        }
+    }
 
     private void Start()
     {

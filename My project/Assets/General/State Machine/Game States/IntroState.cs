@@ -1,11 +1,11 @@
 using UnityEngine;
 
-public class TutorialState : State
+public class IntroState : State
 {
     public override void OnStart()
     {
-        Debug.Log("Tutorial state started.");
-        //throw new System.NotImplementedException();
+        Debug.Log("Intro state started.");
+        ///throw new System.NotImplementedException();
     }
 
     public override void OnUpdate()
