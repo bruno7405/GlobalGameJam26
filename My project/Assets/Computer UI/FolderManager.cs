@@ -6,6 +6,10 @@ public class FolderManager : MonoBehaviour
     
     private GameObject currentFolder;
 
+    public GameObject lockedAudio, openAudio;
+
+    //public State audioState;
+
     public void Start()
     {
         home.SetActive(true);
@@ -20,6 +24,15 @@ public class FolderManager : MonoBehaviour
         currentFolder.SetActive(false);
         folder.SetActive(true);
         currentFolder = folder;
+    }
+
+    public void UnlockFolder(string password)
+    {
+        if (password == "1234")
+        {
+            lockedAudio.SetActive(false);
+            openAudio.SetActive(true);
+        }
     }
     
 }
