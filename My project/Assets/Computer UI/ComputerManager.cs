@@ -4,6 +4,8 @@ using UnityEngine;
 public class ComputerManager : MonoBehaviour
 {
     public GameObject loginScreen, desktop;
+
+    public State introState; 
     
     void Start()
     {
@@ -16,7 +18,11 @@ public class ComputerManager : MonoBehaviour
         if (input == "3101")
         {
             loginScreen.SetActive(false);
-            desktop.SetActive(true);   
+            desktop.SetActive(true);
+            
+            if (StateMachineManager.Instance.currentState.GetType() == typeof(TutorialState)) {
+                StateMachineManager.Instance.SetNewState(introState);
+            }
         }
     }
 }

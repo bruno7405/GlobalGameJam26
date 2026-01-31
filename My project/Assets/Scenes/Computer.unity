@@ -1401,6 +1401,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: '::'
   loginScreen: {fileID: 142183739}
   desktop: {fileID: 1158565515}
+  introState: {fileID: 1817795726}
 --- !u!1 &852848923
 GameObject:
   m_ObjectHideFlags: 0
@@ -2993,6 +2994,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 649f8564d27708c43900c748b143e67c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::StateMachineManager
+  tutorialState: {fileID: 241126160}
   currentState: {fileID: 0}
 --- !u!4 &1653618877
 Transform:
