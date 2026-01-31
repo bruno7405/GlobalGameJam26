@@ -4,11 +4,12 @@ public class IntroState : State
 {
     public override void OnStart()
     {
-        throw new System.NotImplementedException();
+        Debug.Log("Intro state started.");
+        ///throw new System.NotImplementedException();
     }
 
     public override void OnUpdate()
     {
-        throw new System.NotImplementedException();
+        //throw new System.NotImplementedException();
     }
 }
