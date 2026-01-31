@@ -31,15 +31,16 @@ public class PlayerMouse : MonoBehaviour
         // Shoot raycast and check for interactables hit
         if (Physics.Raycast(ray, out hit, 5, interactableMask))
         {
+            currentSelection?.GetComponent<ObjectHighlighter>().DeHighlight();
             currentSelection = hit.transform;
             hit.transform.gameObject.GetComponent<ObjectHighlighter>().Highlight();
 
             // lmb click, interact with item
             if (Mouse.current.leftButton.wasPressedThisFrame) 
             {
-                currentSelection.GetComponent<IInteractable>().OnInteract();
-                currentSelection.GetComponent<ObjectHighlighter>().DeHighlight();
                 interacting = true;
+                currentSelection.GetComponent<ObjectHighlighter>().DeHighlight();
+                currentSelection.GetComponent<IInteractable>().OnInteract();
             }
         }
 
