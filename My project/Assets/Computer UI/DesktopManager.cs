@@ -6,6 +6,8 @@ public class DesktopManager : MonoBehaviour
 
     private Canvas canvas;
 
+    public GameObject logWindowPrefab;
+
 
     void Start()
     {
@@ -25,5 +27,14 @@ public class DesktopManager : MonoBehaviour
     public void CloseFileExplorer()
     {
         fileExplorer.SetActive(false);
+    }
+
+    public void OpenLogFile(string file)
+    {
+        LogWindow lw = Instantiate(logWindowPrefab).GetComponent<LogWindow>();
+        lw.gameObject.transform.SetParent(gameObject.transform);
+        lw.textToDisplay = file;
+        RectTransform rt = lw.GetComponent<RectTransform>();
+        rt.anchoredPosition = new Vector2(0,0); 
     }
 }
