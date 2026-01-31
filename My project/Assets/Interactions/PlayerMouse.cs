@@ -3,34 +3,47 @@ using UnityEngine.InputSystem;
 
 public class PlayerMouse : MonoBehaviour
 {
-    [SerializeField] Camera camera;
+    [SerializeField] Camera cam;
     [SerializeField] LayerMask interactableMask;
     private Transform currentSelection;
 
-    void Start()
-    {
-        
-    }
+    public static bool interacting;
 
-    // Update is called once per frame
     void Update()
     {
+        if (Keyboard.current.escapeKey.wasPressedThisFrame && currentSelection != null)
+        {
+            currentSelection.GetComponent<IInteractable>().OnInteractExit();
+            currentSelection = null;
+        }
+        
+        if (interacting) return;
+
+        // Calculate mouse point ray
         Vector3 mousePos = Mouse.current.position.ReadValue();
         mousePos.z = 10f;
-        mousePos = camera.ScreenToWorldPoint(mousePos);
-        Debug.DrawRay(camera.transform.position, mousePos-transform.position);
+        mousePos = cam.ScreenToWorldPoint(mousePos);
+        // Debug.DrawRay(cam.transform.position, mousePos - transform.position);
         
         RaycastHit hit;
-        Ray ray = new Ray(camera.transform.position, mousePos - transform.position);
+        Ray ray = new Ray(cam.transform.position, mousePos - transform.position);
 
         // Shoot raycast and check for interactables hit
         if (Physics.Raycast(ray, out hit, 5, interactableMask))
         {
             currentSelection = hit.transform;
             hit.transform.gameObject.GetComponent<ObjectHighlighter>().Highlight();
+
+            // lmb click, interact with item
+            if (Mouse.current.leftButton.wasPressedThisFrame) 
+            {
+                currentSelection.GetComponent<IInteractable>().OnInteract();
+                currentSelection.GetComponent<ObjectHighlighter>().DeHighlight();
+                interacting = true;
+            }
         }
 
-        // Raycast did not hit interactable & an item is highlighted
+        // Raycast did not hit interactable & obj is highlighted
         else if (currentSelection != null)
         {
             currentSelection.GetComponent<ObjectHighlighter>().DeHighlight();
