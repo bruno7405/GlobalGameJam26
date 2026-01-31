@@ -11,11 +11,12 @@ public class ComputerInteractable : MonoBehaviour, IInteractable
     public void OnInteract()
     {
         SwitchCamera(computerCinemachineCam);
-        Invoke(nameof(ShowComputerUI), 1);
+        StartCoroutine(ShowComputerUI());
     }
 
     public void OnInteractExit()
     {
+        StopAllCoroutines();
         SwitchCamera(mainCinemachineCam);
         StartCoroutine(HideComputerUI());
     }
@@ -26,15 +27,16 @@ public class ComputerInteractable : MonoBehaviour, IInteractable
         cam.SetActive(true);
     }
 
-    private void ShowComputerUI()
+    private IEnumerator ShowComputerUI()
     {
+        yield return new WaitForSeconds(1);
         computerUI.SetActive(true);
     }
 
     private IEnumerator HideComputerUI()
     {
         computerUI.SetActive(false);
-        yield return new WaitForSeconds(1);
+        yield return new WaitForSeconds(.25f);
         PlayerMouse.interacting = false;
     }
 
