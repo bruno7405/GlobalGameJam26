@@ -39,5 +39,6 @@ public class DesktopManager : MonoBehaviour
 
         RectTransform rt = lw.GetComponent<RectTransform>();
         rt.anchoredPosition = new Vector2(0,0); 
+        rt.localScale = new Vector2(1,1);
     }
 }

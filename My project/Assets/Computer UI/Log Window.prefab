@@ -120,8 +120,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 526099722766526980}
   m_HandleRect: {fileID: 3998496017581338909}
   m_Direction: 2
-  m_Value: 1
-  m_Size: 0.09059191
+  m_Value: 0
+  m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -251,8 +251,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 20.0767, y: 20.0768}
+  m_AnchoredPosition: {x: -1, y: -1}
+  m_SizeDelta: {x: 30, y: 30}
   m_Pivot: {x: 1, y: 1}
 --- !u!222 &8229669602431771895
 CanvasRenderer:
@@ -282,8 +282,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: 1c0ddc6a311106b41a43b2289550027c, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -383,7 +383,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: 0, y: 362.08603}
+  m_AnchoredPosition: {x: 0, y: 873.4535}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!222 &1884295177207905976
@@ -414,10 +414,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Debug Message
+  m_text: 'Debug Message '
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 04ae9d738a4447945b7d381993522c37, type: 2}
-  m_sharedMaterial: {fileID: -7934880769250126378, guid: 04ae9d738a4447945b7d381993522c37, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 2d2d5eb1a16fd0343b99a187a63994d5, type: 2}
+  m_sharedMaterial: {fileID: 7363701700195946319, guid: 2d2d5eb1a16fd0343b99a187a63994d5, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -480,7 +480,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: 20, y: 20, z: 20, w: 50}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -649,8 +649,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 600, y: 541.7632}
+  m_AnchoredPosition: {x: 234.68274, y: -2.5093}
+  m_SizeDelta: {x: 995.7938, y: 903.4531}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2921077805523298554
 CanvasRenderer:
@@ -716,7 +716,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: '::'
   textToDisplay: 
   text: {fileID: 1520030040098175811}
-  typeWriterSpeed: 50
+  typeWriterSpeed: 80
 --- !u!1 &8214923996850218344
 GameObject:
   m_ObjectHideFlags: 0
@@ -778,7 +778,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.392}
+  m_Color: {r: 0.3372549, g: 0.3372549, b: 0.3372549, a: 0.392}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -814,7 +814,7 @@ MonoBehaviour:
   m_Elasticity: 0.1
   m_Inertia: 1
   m_DecelerationRate: 0.135
-  m_ScrollSensitivity: 1
+  m_ScrollSensitivity: 5
   m_Viewport: {fileID: 764231590743589106}
   m_HorizontalScrollbar: {fileID: 0}
   m_VerticalScrollbar: {fileID: 3604105650276820995}
@@ -861,8 +861,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -8.827454}
-  m_SizeDelta: {x: 0, y: -17.6548}
+  m_AnchoredPosition: {x: 0, y: -14.9999695}
+  m_SizeDelta: {x: 0, y: -30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1882655101906028218
 CanvasRenderer:

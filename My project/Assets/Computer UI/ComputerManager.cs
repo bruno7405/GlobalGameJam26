@@ -13,7 +13,7 @@ public class ComputerManager : MonoBehaviour
 
     public void Login(string input)
     {
-        if (input == "1234")
+        if (input == "3101")
         {
             loginScreen.SetActive(false);
             desktop.SetActive(true);   
