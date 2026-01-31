@@ -10,4 +10,4 @@ With multiple lines included for the player to look at.
 
 Does it work?
 
-Also consider adding the typewriter effect because it looks epic.
+Also consider adding the typewriter effect because it looks nice.

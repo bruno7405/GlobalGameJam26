@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 public class DesktopManager : MonoBehaviour
 {
@@ -7,7 +8,6 @@ public class DesktopManager : MonoBehaviour
     private Canvas canvas;
 
     public GameObject logWindowPrefab;
-
 
     void Start()
     {
@@ -33,7 +33,10 @@ public class DesktopManager : MonoBehaviour
     {
         LogWindow lw = Instantiate(logWindowPrefab).GetComponent<LogWindow>();
         lw.gameObject.transform.SetParent(gameObject.transform);
-        lw.textToDisplay = file;
+        
+        TextAsset textAsset = Resources.Load<TextAsset>(file);
+        lw.textToDisplay = textAsset.text;
+
         RectTransform rt = lw.GetComponent<RectTransform>();
         rt.anchoredPosition = new Vector2(0,0); 
     }

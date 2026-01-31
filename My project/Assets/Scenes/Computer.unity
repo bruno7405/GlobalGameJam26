@@ -4470,7 +4470,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2156090131328818698, guid: a683138c06a60bf40a1743cebac8f37c, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
-      value: This is a mission report fr fr fire emoji lets go dudes.
+      value: logTest
       objectReference: {fileID: 0}
     - target: {fileID: 2156090131328818698, guid: a683138c06a60bf40a1743cebac8f37c, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
