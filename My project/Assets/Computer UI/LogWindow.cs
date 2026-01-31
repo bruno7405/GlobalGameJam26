@@ -12,13 +12,13 @@ public class LogWindow : MonoBehaviour
     void Start()
     {
         text.text = textToDisplay;
-        text.maxVisibleCharacters = 0;
+        //text.maxVisibleCharacters = 0;
     }
 
     void Update()
     {
         charCounter += typeWriterSpeed * Time.deltaTime;
-        text.maxVisibleCharacters = Mathf.FloorToInt(charCounter);
+        //text.maxVisibleCharacters = Mathf.FloorToInt(charCounter);
     }
 
     public void CloseWindow()
