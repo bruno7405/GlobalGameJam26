@@ -18,15 +18,7 @@ public class PurpReportState : State
         //BottomChecker.OnScrolledToBottom += HandleScrollBottom;
     }
 
-    // void HandleScrollBottom(string id)
-    // {
-    //     Debug.Log("id:" + id);
-    //     Debug.Log("name:" + logFileName);
-    //     if (id == logFileName)
-    //     {
-    //         GoToNextState();
-    //     }
-    // }
+    
 
     public override void OnUpdate()
     {
