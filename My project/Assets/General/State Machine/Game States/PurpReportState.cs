@@ -9,6 +9,7 @@ public class PurpReportState : State
     {
         StateMachineManager.Instance.SetNewState(nextState);
         BottomChecker.OnScrolledToBottom -= HandleScrollBottom;
+        Debug.Log("Purple file state started!");
     }
 
     public override void OnStart()
