@@ -19,6 +19,8 @@ public class PurpReportState : State
 
     void HandleScrollBottom(string id)
     {
+        Debug.Log("id:" + id);
+        Debug.Log("name:" + logFileName);
         if (id == logFileName)
         {
             StateMachineManager.Instance.SetNewState(nextState);
