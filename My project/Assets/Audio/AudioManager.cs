@@ -40,7 +40,17 @@ public class AudioManager : MonoBehaviour
             return;
         }
 
+        //Debug.Log("Playing sound!");
+
         if (pitchRandomization != 0) s.source.pitch = UnityEngine.Random.Range(1 - pitchRandomization, 1 + pitchRandomization); ;
         s.source.PlayOneShot(s.audioClip);
+    }
+
+    public void StopOneShot(string name)
+    {
+        Sound s = Array.Find(sounds, sound => sound.name == name);
+        if (s == null) return;
+
+        s.source.Stop();
     }
 }
