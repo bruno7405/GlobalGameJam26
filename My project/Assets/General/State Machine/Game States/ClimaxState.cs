@@ -21,6 +21,6 @@ public class ClimaxState : State
 
     public override void OnUpdate()
     {
-        throw new System.NotImplementedException();
+        //throw new System.NotImplementedException();
     }
 }
