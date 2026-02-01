@@ -689,6 +689,7 @@ MonoBehaviour:
   audioLog: debug_call
   audioLength: 40
   computerManager: {fileID: 1004574936}
+  corkBoardManager: {fileID: 283501847}
 --- !u!1 &224267308
 GameObject:
   m_ObjectHideFlags: 0
@@ -6223,7 +6224,7 @@ MonoBehaviour:
   m_fontSizeMax: 72
   m_fontStyle: 0
   m_HorizontalAlignment: 1
-  m_VerticalAlignment: 512
+  m_VerticalAlignment: 256
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_characterHorizontalScale: 1
@@ -6254,7 +6255,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 18.3952, y: 13.051418, z: 18.552341, w: 11.720404}
+  m_margin: {x: 18.3952, y: 15.156853, z: 18.552341, w: 11.720404}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -7660,6 +7661,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1749392985}
     m_Modifications:
+    - target: {fileID: 1366158960596123001, guid: 1ede52d811c59e141bea620cbea12f07, type: 3}
+      propertyPath: corkboard
+      value: 
+      objectReference: {fileID: 283501847}
     - target: {fileID: 1366158960596123001, guid: 1ede52d811c59e141bea620cbea12f07, type: 3}
       propertyPath: mainCinemachineCam
       value: 
