@@ -21,4 +21,12 @@ public class PasswordDialogue : MonoBehaviour
     {
         gameObject.SetActive(false);
     }
+
+    public void UnlockFolder(string password)
+    {
+        if (password == "9953")
+        {
+            Close();
+        }
+    }
 }
