@@ -1,30 +1,39 @@
 using System.Collections;
 using UnityEngine;
 
+[RequireComponent(typeof(PhoneInteractable))]
 public class PhoneManager : MonoBehaviour
 {
+    [SerializeField] Dialogue tutorialDialogue;
+    [SerializeField] Dialogue secretaryDialogue;
+
+
     [HideInInspector] public bool receivingCall = false;
     [HideInInspector] public string incomingCallAudio;
     [HideInInspector] public string outgoingCallAudio;
     
-    [HideInInspector] public float callLength;
+    [HideInInspector] public float callLength = 1;
 
     public string dialAudio;
     public float dialLength;
     public string dudAudio;
 
+    private PhoneInteractable phoneInteractable;
     private bool phoneLock = false;
-    
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+
+    private void Awake()
     {
-        
+        phoneInteractable = GetComponent<PhoneInteractable>();
     }
 
-    // Update is called once per frame
-    void Update()
+    private void OnEnable()
     {
-        
+        DialogueManager.Instance.onDialogFinished += FinishCall;
+    }
+
+    private void OnDisable()
+    {
+        DialogueManager.Instance.onDialogFinished -= FinishCall;
     }
 
     public void StartRinger()
@@ -37,13 +46,16 @@ public class PhoneManager : MonoBehaviour
     {
         if (phoneLock) return;
         phoneLock = true;
-        
+        PlayerMouse.active = false; // disables input
+
         receivingCall = false;
         
         AudioManager.instance.StopLoop("phone_ring");
         AudioManager.instance.PlayOneShot(incomingCallAudio);
 
-        StartCoroutine(nameof(RunOutPhoneCall));
+        DialogueManager.Instance.StartDialogue(tutorialDialogue);
+
+        // StartCoroutine(nameof(RunOutPhoneCall));
     }
 
     public void CallSecretary()
@@ -76,10 +88,20 @@ public class PhoneManager : MonoBehaviour
         phoneLock = false;
     }
 
+    private void FinishCall()
+    {
+        StateMachineManager.Instance.currentState.GoToNextState();
+        phoneLock = false;
+        PlayerMouse.active = true; // enables input
+        phoneInteractable.OnInteractExit();
+    }
+
     IEnumerator RunOutPhoneCall()
     {
         yield return new WaitForSeconds(callLength);
         StateMachineManager.Instance.currentState.GoToNextState();
         phoneLock = false;
+        PlayerMouse.active = true; // enables input
+        phoneInteractable.OnInteractExit();
     }
 }

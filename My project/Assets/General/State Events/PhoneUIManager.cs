@@ -8,18 +8,6 @@ public class PhoneUIManager : MonoBehaviour
     public PhoneManager phoneManager;
     public TMP_InputField inputField;
     
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     public void AttemptCall()
     {
         string numbers = inputField.text.Trim();
@@ -29,7 +17,8 @@ public class PhoneUIManager : MonoBehaviour
         if (numbers == secretaryPhoneNumber && StateMachineManager.Instance.currentState.GetType() == typeof(IntroState))
         {
             phoneManager.CallSecretary();
-        } else if (numbers == "3564")
+        } 
+        else if (numbers == "3564")
         {
             AudioManager.instance.PlayOneShot("debug_call"); // easter egg
         } 

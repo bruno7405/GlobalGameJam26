@@ -1,8 +1,12 @@
+using System.Collections;
+using Unity.Cinemachine;
 using UnityEngine;
 
 public class PhoneInteractable : MonoBehaviour, IInteractable
 {
     [SerializeField] GameObject phoneUI;
+    [SerializeField] GameObject mainCinemachineCam;
+    [SerializeField] GameObject phoneCinemachineCam;
 
     PhoneManager phoneManager;
 
@@ -17,15 +21,39 @@ public class PhoneInteractable : MonoBehaviour, IInteractable
         // If not open UI normally
         if (phoneManager.receivingCall) {
             phoneManager.PickUpCall();
+            SwitchCamera(phoneCinemachineCam);
         }
         else {
-            phoneUI.SetActive(true);
+            StartCoroutine(PanToPhone());
         }
     }
 
     public void OnInteractExit()
     {
+        StopAllCoroutines();
         phoneUI.SetActive(false);
         PlayerMouse.interacting = false;
+        StartCoroutine(PanToNormal());
+    }
+
+    private void SwitchCamera(GameObject cam)
+    {
+        cam.SetActive(false);
+        cam.SetActive(true);
+    }
+
+
+    private IEnumerator PanToPhone()
+    {
+        SwitchCamera(phoneCinemachineCam);
+        yield return new WaitForSeconds(1);
+        phoneUI.SetActive(true);
+    }
+
+    private IEnumerator PanToNormal()
+    {
+        SwitchCamera(mainCinemachineCam);
+        yield return new WaitForSeconds(1);
+        phoneUI.SetActive(false);
     }
 }
