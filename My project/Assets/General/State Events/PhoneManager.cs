@@ -23,19 +23,25 @@ public class PhoneManager : MonoBehaviour
     private PhoneInteractable phoneInteractable;
     private bool phoneLock = false;
 
+    public static PhoneManager Instance;
+
     private void Awake()
     {
         phoneInteractable = GetComponent<PhoneInteractable>();
+        // DialogueManager.Instance.onDialogFinished += FinishCall;
+
+        Instance = this;
+
     }
 
     private void OnEnable()
     {
-        DialogueManager.Instance.onDialogFinished += FinishCall;
+        //DialogueManager.Instance.onDialogFinished += FinishCall;
     }
 
     private void OnDisable()
     {
-        DialogueManager.Instance.onDialogFinished -= FinishCall;
+        // DialogueManager.Instance.onDialogFinished -= FinishCall;
     }
 
     public void StartRinger()
@@ -116,7 +122,7 @@ public class PhoneManager : MonoBehaviour
         phoneLock = false;
     }
 
-    private void FinishCall()
+    public void FinishCall()
     {
         AudioManager.instance.PlayOneShot("hang_up");
         StateMachineManager.Instance.currentState.GoToNextState();

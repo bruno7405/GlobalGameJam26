@@ -132,5 +132,6 @@ public class DialogueManager : MonoBehaviour
     {
         dialogueText.text = "";
         onDialogFinished?.Invoke();
+        PhoneManager.Instance.FinishCall();
     }
 }

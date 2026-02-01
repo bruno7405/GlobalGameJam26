@@ -53,7 +53,7 @@ MonoBehaviour:
     loop: 1
     source: {fileID: 0}
   - name: debug_call
-    audioClip: {fileID: 8300000, guid: 443696d255524cc4c860ff038a61ce4c, type: 3}
+    audioClip: {fileID: 8300000, guid: 167c3d24d4a09964a8bf2671f42b7b58, type: 3}
     volume: 1
     pitch: 1
     loop: 0
