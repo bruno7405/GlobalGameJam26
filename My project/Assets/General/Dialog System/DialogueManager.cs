@@ -103,6 +103,9 @@ public class DialogueManager : MonoBehaviour
             case "silver":
                 dialogueText.color = colors[7];
                 break;
+            case "s":
+                dialogueText.color = Color.ghostWhite;
+                break;
             default:
                 dialogueText.color = Color.ghostWhite;
                 break;

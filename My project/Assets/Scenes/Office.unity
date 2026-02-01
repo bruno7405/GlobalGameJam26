@@ -4775,10 +4775,6 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5881473817424332632, guid: 1c7bae80a6be45a45b1ef8a266a6c8c0, type: 3}
-      propertyPath: computerUI
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 5881473817424332632, guid: 1c7bae80a6be45a45b1ef8a266a6c8c0, type: 3}
       propertyPath: mainCinemachineCam
       value: 
       objectReference: {fileID: 54513525}

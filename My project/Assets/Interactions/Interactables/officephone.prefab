@@ -555,7 +555,20 @@ MonoBehaviour:
       Alright catch you later *Hangs up*'
   secretaryDialogue:
     name: 
-    sentences: []
+    sentences:
+    - "[Silver]Hey, I found your number in my file. I\u2019ve been looking through
+      the files YELLOW sent me, and the reports don\u2019t line up."
+    - '[Silver]I need to figure out what happened to PINK and where PURPLE is. Do
+      you have anything that could help me?
+
+'
+    - "[s] Agent SILVER. I believe we retrieved the Mission Audio Logs from PURPLE\u2019s
+      van. That would contain the transcript of what the agents said over the radio."
+    - '[Silver] Yeah, that actually sounds useful. When can you send them over?'
+    - '[s]Already did, Agent. The access code is <color=red>1234</color>. I will
+      let you know if I find anything else. *Hangs Up*
+
+'
   receivingCall: 0
   incomingCallAudio: 
   outgoingCallAudio: 

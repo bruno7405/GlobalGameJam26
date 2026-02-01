@@ -65,7 +65,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 100010
+  m_text: 3101
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 33fd9fb9e404bf649b17a2ecad7f6bd8, type: 2}
   m_sharedMaterial: {fileID: -8295266818338075572, guid: 33fd9fb9e404bf649b17a2ecad7f6bd8, type: 2}
@@ -153,7 +153,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &4169672885622523246
 Transform:
   m_ObjectHideFlags: 0
@@ -326,12 +326,14 @@ GameObject:
   - component: {fileID: 3519879524560516300}
   - component: {fileID: 6028178447741104626}
   - component: {fileID: 8365771224837707009}
-  m_Layer: 0
+  - component: {fileID: 6321279745852117482}
+  - component: {fileID: 650461766918701486}
+  m_Layer: 6
   m_Name: StickyNote
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &8466198654334817957
 Transform:
@@ -341,9 +343,9 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7648491591393977364}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.11039778, y: -0.11039787, z: 0.69843596, w: 0.69843537}
+  m_LocalRotation: {x: -0.11039645, y: -0.11039645, z: 0.69843584, w: 0.69843584}
   m_LocalPosition: {x: 0.2877333, y: 0.5530667, z: 0.042605415}
-  m_LocalScale: {x: 0.013333335, y: 0.013333335, z: 0.013333334}
+  m_LocalScale: {x: 0.06590234, y: 0.048427485, z: 0.08072494}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 6948165106781920395}
@@ -420,4 +422,41 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GeneralInteractable
   mainCinemachineCam: {fileID: 0}
-  objCnemachineCam: {fileID: 0}
+  objCnemachineCam: {fileID: 5057258311510010175}
+--- !u!114 &6321279745852117482
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7648491591393977364}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0edef075de6ea12409e7be9a607335ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ObjectHighlighter
+  highlightedColor: {r: 1, g: 1, b: 1, a: 1}
+  rendererParent: {fileID: 7648491591393977364}
+  renderers: []
+--- !u!64 &650461766918701486
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7648491591393977364}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -462981019419857548, guid: 0d64e0b117a35c7458c23977fcd29ecc, type: 3}
