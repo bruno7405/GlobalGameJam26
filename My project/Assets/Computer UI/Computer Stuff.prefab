@@ -1063,7 +1063,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: 0.00076293945, y: 873.4535}
+  m_AnchoredPosition: {x: 0.0013122559, y: 873.4535}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!222 &2588230371923513385
@@ -2317,7 +2317,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: '::'
   loginScreen: {fileID: 8279482590631469907}
   desktop: {fileID: 1152492549071219515}
-  introState: {fileID: 0}
+  audioFile: 
+  audioLength: 0
 --- !u!1 &4953511193238024599
 GameObject:
   m_ObjectHideFlags: 0
@@ -2770,7 +2771,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 420, y: 32}
-  m_SizeDelta: {x: 600, y: 400}
+  m_SizeDelta: {x: 709.2031, y: 501.2734}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3608909565253871684
 CanvasRenderer:
@@ -3127,6 +3128,7 @@ MonoBehaviour:
   documents: {fileID: 398674303894079905}
   lockedAudio: {fileID: 7305775122717456438}
   openAudio: {fileID: 735544871779585448}
+  passcode: 1234
 --- !u!1 &7004819090338746449
 GameObject:
   m_ObjectHideFlags: 0
@@ -3628,7 +3630,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -15}
+  m_AnchoredPosition: {x: 0, y: -14.999954}
   m_SizeDelta: {x: 0, y: -30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1943097038600760956
