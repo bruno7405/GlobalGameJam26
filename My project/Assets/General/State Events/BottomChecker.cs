@@ -20,6 +20,7 @@ public class BottomChecker : MonoBehaviour
         if (getRect.verticalNormalizedPosition <= 0.1)
         {
             OnScrolledToBottom?.Invoke(gameObject.transform.parent.transform.parent.name); // D: 
+            Debug.Log(gameObject.transform.parent.transform.parent.name);
         }
     }
 }
