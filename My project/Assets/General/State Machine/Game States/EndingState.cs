@@ -1,5 +1,6 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class EndingState : State
 {
@@ -34,7 +35,7 @@ public class EndingState : State
 
     public void SwapToCredits()
     {
-        
+        //SceneManager.LoadScene();
     }
 
     public override void OnUpdate()
