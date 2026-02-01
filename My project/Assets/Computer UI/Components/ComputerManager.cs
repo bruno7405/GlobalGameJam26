@@ -1,11 +1,12 @@
 using System;
+using System.Collections;
 using UnityEngine;
 
 public class ComputerManager : MonoBehaviour
 {
     public GameObject loginScreen, desktop;
-
-    public State introState; 
+    [HideInInspector] public string audioFile;
+    [HideInInspector] public float audioLength;
     
     void Start()
     {
@@ -19,10 +20,18 @@ public class ComputerManager : MonoBehaviour
         {
             loginScreen.SetActive(false);
             desktop.SetActive(true);
-            
-            if (StateMachineManager.Instance.currentState.GetType() == typeof(TutorialState)) {
-                StateMachineManager.Instance.SetNewState(introState);
-            }
         }
+    }
+
+    public void PlayAudioLog()
+    {
+        AudioManager.instance.PlayOneShot(audioFile);
+        StartCoroutine(nameof(WaitForAudio));
+    }
+
+    IEnumerator WaitForAudio()
+    {
+        yield return new WaitForSeconds(audioLength);
+        StateMachineManager.Instance.currentState.GoToNextState();
     }
 }

@@ -8,6 +8,8 @@ public class FolderManager : MonoBehaviour
 
     public GameObject lockedAudio, openAudio;
 
+    public string passcode = "1234";
+
     //public State audioState;
 
     public void Start()
@@ -28,7 +30,7 @@ public class FolderManager : MonoBehaviour
 
     public void UnlockFolder(string password)
     {
-        if (password == "1234")
+        if (password == passcode && StateMachineManager.Instance.currentState.GetType() == typeof(AudioLogState))
         {
             lockedAudio.SetActive(false);
             openAudio.SetActive(true);

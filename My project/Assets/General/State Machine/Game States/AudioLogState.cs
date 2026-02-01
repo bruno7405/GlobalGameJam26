@@ -2,7 +2,10 @@ using UnityEngine;
 
 public class AudioLogState : State
 {
-    
+    public string audioLog = "debug_call";
+    public float audioLength = 5;
+
+    public ComputerManager computerManager;
     
     public override void GoToNextState()
     {
@@ -11,6 +14,10 @@ public class AudioLogState : State
 
     public override void OnStart()
     {
+        Debug.Log("Audio State!");
+
+        computerManager.audioFile = audioLog;
+        computerManager.audioLength = audioLength;
         //throw new System.NotImplementedException();
     }
 

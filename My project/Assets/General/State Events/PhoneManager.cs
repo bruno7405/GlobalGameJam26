@@ -12,6 +12,8 @@ public class PhoneManager : MonoBehaviour
     public string dialAudio;
     public float dialLength;
     public string dudAudio;
+
+    private bool phoneLock = false;
     
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -33,6 +35,9 @@ public class PhoneManager : MonoBehaviour
 
     public void PickUpCall()
     {
+        if (phoneLock) return;
+        phoneLock = true;
+        
         receivingCall = false;
         
         AudioManager.instance.StopLoop("phone_ring");
@@ -43,6 +48,8 @@ public class PhoneManager : MonoBehaviour
 
     public void CallSecretary()
     {
+        if (phoneLock) return;
+        phoneLock = true;
         StartCoroutine(nameof(ICallSecretary));
     }
 
@@ -56,6 +63,8 @@ public class PhoneManager : MonoBehaviour
 
     public void CallDud()
     {
+        if (phoneLock) return;
+        phoneLock = true;
         StartCoroutine(nameof(PlayDialTone));
     }
 
@@ -64,11 +73,13 @@ public class PhoneManager : MonoBehaviour
         AudioManager.instance.PlayOneShot(dialAudio);
         yield return new WaitForSeconds(dialLength);
         AudioManager.instance.PlayOneShot(dudAudio);
+        phoneLock = false;
     }
 
     IEnumerator RunOutPhoneCall()
     {
         yield return new WaitForSeconds(callLength);
         StateMachineManager.Instance.currentState.GoToNextState();
+        phoneLock = false;
     }
 }

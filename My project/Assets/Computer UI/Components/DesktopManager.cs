@@ -34,6 +34,7 @@ public class DesktopManager : MonoBehaviour
         LogWindow lw = Instantiate(logWindowPrefab).GetComponent<LogWindow>();
         lw.gameObject.SetActive(true);
         lw.gameObject.transform.SetParent(gameObject.transform);
+        lw.gameObject.name = file;
         
         TextAsset textAsset = Resources.Load<TextAsset>(file);
         lw.textToDisplay = textAsset.text;

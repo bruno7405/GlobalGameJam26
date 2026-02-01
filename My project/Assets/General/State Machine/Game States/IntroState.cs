@@ -10,7 +10,7 @@ public class IntroState : State
     {
         Debug.Log("Intro state started.");
         phoneManager.outgoingCallAudio = secretaryCallAudio;
-        phoneManager.callLength = 5f;
+        phoneManager.callLength = secretaryCallLength;
     }
 
     public override void OnUpdate()

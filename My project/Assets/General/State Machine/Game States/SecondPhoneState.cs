@@ -2,18 +2,26 @@ using UnityEngine;
 
 public class SecondPhoneState : State
 {
+    public PhoneManager phoneManager;
+    public string secretarySecondCallAudio = "debug_call";
+    public float secretarySecondCallLength = 5f;
+    
+    
     public override void GoToNextState()
     {
-        throw new System.NotImplementedException();
+        StateMachineManager.Instance.SetNewState(nextState);
     }
 
     public override void OnStart()
     {
-        throw new System.NotImplementedException();
+        Debug.Log("Second Phone state started.");
+        phoneManager.StartRinger();
+        phoneManager.outgoingCallAudio = secretarySecondCallAudio;
+        phoneManager.callLength = secretarySecondCallLength;
     }
 
     public override void OnUpdate()
     {
-        throw new System.NotImplementedException();
+        //throw new System.NotImplementedException();
     }
 }

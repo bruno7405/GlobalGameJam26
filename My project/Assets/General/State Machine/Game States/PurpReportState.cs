@@ -2,18 +2,32 @@ using UnityEngine;
 
 public class PurpReportState : State
 {
+    public GameObject purpleFile;
+    public string logFileName;
+    
     public override void GoToNextState()
     {
-        throw new System.NotImplementedException();
+        StateMachineManager.Instance.SetNewState(nextState);
+        BottomChecker.OnScrolledToBottom -= HandleScrollBottom;
     }
 
     public override void OnStart()
     {
-        throw new System.NotImplementedException();
+        purpleFile.SetActive(true);
+        BottomChecker.OnScrolledToBottom += HandleScrollBottom;
+    }
+
+    void HandleScrollBottom(string id)
+    {
+        if (id == logFileName)
+        {
+            StateMachineManager.Instance.SetNewState(nextState);
+            GoToNextState();
+        }
     }
 
     public override void OnUpdate()
     {
-        throw new System.NotImplementedException();
+        //throw new System.NotImplementedException();
     }
 }
