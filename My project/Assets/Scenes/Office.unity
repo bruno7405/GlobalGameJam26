@@ -206,6 +206,7 @@ GameObject:
   - component: {fileID: 85964391}
   - component: {fileID: 85964390}
   - component: {fileID: 85964389}
+  - component: {fileID: 85964393}
   m_Layer: 5
   m_Name: PhoneUI
   m_TagString: Untagged
@@ -296,6 +297,21 @@ RectTransform:
   m_AnchoredPosition: {x: -14.8169775, y: -14.282859}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &85964393
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 85964388}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1be6f493703603749868cea2e16bde51, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
+  secretaryPhoneNumber: 1234456767
+  phoneManager: {fileID: 919132148157966822}
+  inputField: {fileID: 491117793}
 --- !u!1 &143693099
 GameObject:
   m_ObjectHideFlags: 0
@@ -419,8 +435,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4731a645dd379464598bc65e4a32d28f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  stateMachine: {fileID: 0}
-  parent: {fileID: 0}
+  nextState: {fileID: 270904279}
 --- !u!1 &224267308
 GameObject:
   m_ObjectHideFlags: 0
@@ -557,8 +572,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca915f85d24898d41857db9168c65069, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  stateMachine: {fileID: 0}
-  parent: {fileID: 0}
+  nextState: {fileID: 1673912236}
 --- !u!4 &310749445 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1609198202616842138, guid: 1c7bae80a6be45a45b1ef8a266a6c8c0, type: 3}
@@ -841,8 +855,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 73d43f87d53cb7b4abbaa1427183bf44, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  stateMachine: {fileID: 0}
-  parent: {fileID: 0}
+  nextState: {fileID: 196988546}
 --- !u!1 &467635798
 GameObject:
   m_ObjectHideFlags: 0
@@ -1800,7 +1813,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 688517107}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 85964393}
+        m_TargetAssemblyTypeName: PhoneUIManager, Assembly-CSharp
+        m_MethodName: AttemptCall
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &688517107
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1883,8 +1908,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 756817795ed111541a84fe5e95952177, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  stateMachine: {fileID: 0}
-  parent: {fileID: 0}
+  nextState: {fileID: 0}
 --- !u!1 &894148741
 GameObject:
   m_ObjectHideFlags: 0
@@ -2290,8 +2314,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 67f5fc28cf0ce6d4596259310fa04fde, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  stateMachine: {fileID: 0}
-  parent: {fileID: 0}
+  nextState: {fileID: 761715879}
 --- !u!1 &1204017338
 GameObject:
   m_ObjectHideFlags: 0
@@ -2558,6 +2581,18 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: debug_call
     audioClip: {fileID: 8300000, guid: 443696d255524cc4c860ff038a61ce4c, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: phone_dial
+    audioClip: {fileID: 8300000, guid: 5c842bbdc4f34ad419bff711f36723cc, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: phone_dud
+    audioClip: {fileID: 8300000, guid: bf21512639f4f7d4ab2081a20c5c4681, type: 3}
     volume: 1
     pitch: 1
     loop: 0
@@ -3058,8 +3093,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b793f8564989fa47be353ff6bb7f522, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  stateMachine: {fileID: 0}
-  parent: {fileID: 0}
+  nextState: {fileID: 411960748}
+  phoneManager: {fileID: 919132148157966822}
+  secretaryCallAudio: debug_call
+  secretaryCallLength: 5
 --- !u!1 &1588839050
 GameObject:
   m_ObjectHideFlags: 0
@@ -3262,8 +3299,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1d1b2e346c625e64cb3666ceb349caae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  stateMachine: {fileID: 0}
-  parent: {fileID: 0}
+  nextState: {fileID: 1026933417}
 --- !u!1 &1722915889
 GameObject:
   m_ObjectHideFlags: 0
@@ -3347,13 +3383,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 479a6001c2fa8b347975257da3d9d206, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::IntroState
-  stateMachine: {fileID: 0}
-  parent: {fileID: 0}
+  nextState: {fileID: 1442554272}
   phoneManager: {fileID: 919132148157966822}
   timeBeforeRing: 5
   tutorialCallAudio: debug_call
-  tutorialCallLength: 11
-  nextState: {fileID: 1442554272}
+  tutorialCallLength: 3
 --- !u!1 &1749392984
 GameObject:
   m_ObjectHideFlags: 0
@@ -4453,7 +4487,6 @@ GameObject:
   - component: {fileID: 1284887733}
   - component: {fileID: 919132148157966820}
   - component: {fileID: 919132148157966819}
-  - component: {fileID: 919132148157966821}
   - component: {fileID: 919132148157966822}
   m_Layer: 6
   m_Name: officephone
@@ -4490,18 +4523,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PhoneInteractable
   phoneUI: {fileID: 85964388}
---- !u!114 &919132148157966821
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 919132148157966818}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3227bc4fe55a2444cab7f85676030646, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: '::'
 --- !u!114 &919132148157966822
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4515,8 +4536,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   receivingCall: 0
-  audioDialogue: 
+  incomingCallAudio: 
+  outgoingCallAudio: 
   callLength: 0
+  dialAudio: phone_dial
+  dialLength: 8
+  dudAudio: phone_dud
 --- !u!4 &1038333035994987264
 Transform:
   m_ObjectHideFlags: 0

@@ -7,8 +7,6 @@ public class TutorialState : State
     public float timeBeforeRing = 5f;
     public string tutorialCallAudio = "debug_call";
     public float tutorialCallLength = 11f;
-
-    public State nextState;
     
     public override void OnStart()
     {
@@ -22,7 +20,7 @@ public class TutorialState : State
     {
         yield return new WaitForSeconds(timeBeforeRing);
         phoneManager.StartRinger();
-        phoneManager.audioDialogue = tutorialCallAudio;
+        phoneManager.incomingCallAudio = tutorialCallAudio;
         phoneManager.callLength = tutorialCallLength;
     }
 

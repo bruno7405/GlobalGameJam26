@@ -2,18 +2,20 @@ using UnityEngine;
 
 public class AudioLogState : State
 {
+    
+    
     public override void GoToNextState()
     {
-        throw new System.NotImplementedException();
+        StateMachineManager.Instance.SetNewState(nextState);
     }
 
     public override void OnStart()
     {
-        throw new System.NotImplementedException();
+        //throw new System.NotImplementedException();
     }
 
     public override void OnUpdate()
     {
-        throw new System.NotImplementedException();
+        //throw new System.NotImplementedException();
     }
 }
