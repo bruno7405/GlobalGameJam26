@@ -4,7 +4,7 @@ using UnityEngine;
 public class TutorialState : State
 {
     public PhoneManager phoneManager;
-    public float timeBeforeRing = 5f;
+    public float timeBeforeRing = 3f;
     public string tutorialCallAudio = "debug_call";
     public float tutorialCallLength = 11f;
     
@@ -12,13 +12,17 @@ public class TutorialState : State
     {
         Debug.Log("Tutorial state started.");
 
-        StartCoroutine(nameof(sequencePhone));
+        StartCoroutine(nameof(SequencePhone));
         //throw new System.NotImplementedException();
+        BlackScreenUI.Instance.Black();
     }
 
-    private IEnumerator sequencePhone()
+    private IEnumerator SequencePhone()
     {
+        PlayerMouse.active = false;
         yield return new WaitForSeconds(timeBeforeRing);
+        BlackScreenUI.Instance.FadeToNormal();
+        PlayerMouse.active = true;
         phoneManager.StartRinger();
         phoneManager.incomingCallAudio = tutorialCallAudio;
         phoneManager.callLength = tutorialCallLength;

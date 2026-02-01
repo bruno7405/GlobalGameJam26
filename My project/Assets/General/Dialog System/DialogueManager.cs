@@ -61,7 +61,7 @@ public class DialogueManager : MonoBehaviour
 
     private IEnumerator TypeSentence(string sentence)
     {
-        int charsPerSfx = 4;
+        int charsPerSfx = 3;
         int counter = 0;
         dialogueText.text = "";
 
