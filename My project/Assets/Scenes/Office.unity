@@ -930,6 +930,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 283501846}
+  - component: {fileID: 283501847}
   m_Layer: 0
   m_Name: CorkboardDecorated (1)
   m_TagString: Untagged
@@ -954,6 +955,22 @@ Transform:
   - {fileID: 1491237838}
   m_Father: {fileID: 224267309}
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+--- !u!114 &283501847
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 283501845}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f93bc94170096e84fbdaf5e94503b025, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
+  logs:
+  - "Computer Passcode:  \t<b>3101</b>"
+  - "Secretary Phone Number:  \t<b>123-445-6767</b>  "
+  - "Audio Folder Passcode:  \t<b>9953</b> "
 --- !u!1 &291170816
 GameObject:
   m_ObjectHideFlags: 0
@@ -6019,8 +6036,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Computer Passcode: \n\t<b>3101</b> \r\nSecretary Phone Number: \n\t<b>123-445-6767</b> 
-    \r\nAudio Folder Passcode: \n\t<b>9953</b> \r\n"
+  m_text: "Computer Passcode:\t(DEBUG) \n\t<b>3101</b> \r\nSecretary Phone Number:
+    \n\t<b>123-445-6767</b>  \r\nAudio Folder Passcode: \n\t<b>9953</b> \r\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: b5cee936ceeb6a24c9e1a2c3d9dc9bc1, type: 2}
   m_sharedMaterial: {fileID: -8066412884110212470, guid: b5cee936ceeb6a24c9e1a2c3d9dc9bc1, type: 2}
