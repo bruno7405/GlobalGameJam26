@@ -8,18 +8,19 @@ public class GunInteractable : MonoBehaviour, IInteractable
     Quaternion originalRotation;
     [SerializeField] Transform handTransform;
 
+    [SerializeField] Dialogue gunCheckDialog;
+
     private void Start()
     {
         originalPos = transform.position;
         originalRotation = transform.rotation;
     }
 
+
     public void OnInteract()
     {
-        if (StateMachineManager.Instance.currentState.GetType() == typeof(GunCheckState))
-        {
-            StateMachineManager.Instance.currentState.GoToNextState();
-        }
+        if (StateMachineManager.Instance.currentState.GetType() == typeof(GunCheckState)) StartCoroutine(GunCheckSequence());
+        else if (StateMachineManager.Instance.currentState.GetType() == typeof(GunCheckTwoState)) StartCoroutine(GunCheckSequence2());
 
         StartCoroutine(MoveTo(handTransform.position, handTransform.rotation, 0.5f));
     }
@@ -29,6 +30,19 @@ public class GunInteractable : MonoBehaviour, IInteractable
         StopAllCoroutines();
         StartCoroutine(MoveTo(originalPos, originalRotation, 0.5f));
         PlayerMouse.interacting = false;
+    }
+
+    IEnumerator GunCheckSequence()
+    {
+        DialogueManager.Instance.StartDialogue(gunCheckDialog);
+        yield return new WaitForSeconds(10);
+        StateMachineManager.Instance.currentState.GoToNextState();
+    }
+
+    IEnumerator GunCheckSequence2()
+    {
+        yield return new WaitForSeconds(1);
+        StateMachineManager.Instance.currentState.GoToNextState();
     }
 
     IEnumerator MoveTo(Vector3 targetPosition, Quaternion targetRotation, float duration)
