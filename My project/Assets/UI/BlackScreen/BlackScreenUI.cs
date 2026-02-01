@@ -3,12 +3,21 @@ using UnityEngine;
 public class BlackScreenUI : MonoBehaviour
 {
 
-    [SerializeField] GameObject root;
-    Animator animator;
+    public GameObject root;
+    [SerializeField] Animator animator;
+
+    public static BlackScreenUI Instance;
 
     private void Awake()
     {
-        animator = GetComponent<Animator>();
+        if (Instance != null && Instance != this)
+        {
+            Destroy(this);
+        }
+        else
+        {
+            Instance = this;
+        }
     }
 
     public void FadeToBlack()
@@ -21,5 +30,17 @@ public class BlackScreenUI : MonoBehaviour
     {
         root.SetActive(true);
         animator.SetTrigger("fadeToNormal");
+    }
+
+    public void Black()
+    {
+        root.SetActive(true);
+        animator.SetTrigger("black");
+    }
+
+    public void Normal()
+    {
+        root.SetActive(true);   
+        animator.SetTrigger("normal");
     }
 }
