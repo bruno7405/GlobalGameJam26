@@ -783,7 +783,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 649f8564d27708c43900c748b143e67c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::StateMachineManager
-  tutorialState: {fileID: 1583734614}
+  tutorialState: {fileID: 1748878329}
   currentState: {fileID: 0}
 --- !u!1 &231221855
 GameObject:

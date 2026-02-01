@@ -36,7 +36,9 @@ public class GunInteractable : MonoBehaviour, IInteractable
     {
         Debug.Log("gun check 1");
         DialogueManager.Instance.StartDialogue(gunCheckDialog);
-        yield return new WaitForSeconds(10);
+        yield return new WaitForSeconds(4);
+        OnInteractExit();
+        yield return new WaitForSeconds(6);
         Debug.Log("boo");
         StateMachineManager.Instance.currentState.GoToNextState();
     }
