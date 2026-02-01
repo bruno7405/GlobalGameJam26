@@ -28,19 +28,22 @@ public class GunInteractable : MonoBehaviour, IInteractable
     public void OnInteractExit()
     {
         StopAllCoroutines();
-        StartCoroutine(MoveTo(originalPos, originalRotation, 0.5f));
         PlayerMouse.interacting = false;
+        StartCoroutine(MoveTo(originalPos, originalRotation, 0.5f));
     }
 
     IEnumerator GunCheckSequence()
     {
+        Debug.Log("gun check 1");
         DialogueManager.Instance.StartDialogue(gunCheckDialog);
         yield return new WaitForSeconds(10);
+        Debug.Log("boo");
         StateMachineManager.Instance.currentState.GoToNextState();
     }
 
     IEnumerator GunCheckSequence2()
     {
+        Debug.Log("gun check 2");
         yield return new WaitForSeconds(1);
         StateMachineManager.Instance.currentState.GoToNextState();
     }

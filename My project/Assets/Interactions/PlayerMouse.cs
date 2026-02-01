@@ -41,6 +41,7 @@ public class PlayerMouse : MonoBehaviour
             // lmb click, interact with item
             if (Mouse.current.leftButton.wasPressedThisFrame) 
             {
+                Debug.Log("Interacting with " + currentSelection.name);
                 interacting = true;
                 currentSelection.GetComponent<ObjectHighlighter>().DeHighlight();
                 currentSelection.GetComponent<IInteractable>().OnInteract();
