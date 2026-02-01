@@ -8,26 +8,25 @@ public class PurpReportState : State
     public override void GoToNextState()
     {
         StateMachineManager.Instance.SetNewState(nextState);
-        BottomChecker.OnScrolledToBottom -= HandleScrollBottom;
-        Debug.Log("Purple file state started!");
+        //BottomChecker.OnScrolledToBottom -= HandleScrollBottom;
     }
 
     public override void OnStart()
     {
         purpleFile.SetActive(true);
-        BottomChecker.OnScrolledToBottom += HandleScrollBottom;
+        Debug.Log("Purple file state started!");
+        //BottomChecker.OnScrolledToBottom += HandleScrollBottom;
     }
 
-    void HandleScrollBottom(string id)
-    {
-        Debug.Log("id:" + id);
-        Debug.Log("name:" + logFileName);
-        if (id == logFileName)
-        {
-            StateMachineManager.Instance.SetNewState(nextState);
-            GoToNextState();
-        }
-    }
+    // void HandleScrollBottom(string id)
+    // {
+    //     Debug.Log("id:" + id);
+    //     Debug.Log("name:" + logFileName);
+    //     if (id == logFileName)
+    //     {
+    //         GoToNextState();
+    //     }
+    // }
 
     public override void OnUpdate()
     {
