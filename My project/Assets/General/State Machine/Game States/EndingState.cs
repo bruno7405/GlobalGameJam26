@@ -18,6 +18,9 @@ public class EndingState : State
 
     public override void OnStart()
     {
+        
+        AudioManager.instance.StopLoop("door_knocking");
+        
         StartCoroutine(EndingSequence());
     }
 
@@ -46,6 +49,6 @@ public class EndingState : State
 
     public override void OnUpdate()
     {
-        throw new System.NotImplementedException();
+        //throw new System.NotImplementedException();
     }
 }

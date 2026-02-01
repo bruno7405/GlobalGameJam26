@@ -112,6 +112,12 @@ MonoBehaviour:
     pitch: 1
     loop: 0
     source: {fileID: 0}
+  - name: audio_log
+    audioClip: {fileID: 8300000, guid: 5c9b67b6c1de7ca4995abbfa5d83c9b8, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
 --- !u!82 &3218319919320901156
 AudioSource:
   m_ObjectHideFlags: 0

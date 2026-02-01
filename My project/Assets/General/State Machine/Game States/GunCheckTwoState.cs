@@ -14,6 +14,7 @@ public class GunCheckTwoState : State
     {
         // PICK UP THE GUN
         pickUpGunText.SetActive(true);
+        AudioManager.instance.PlayLoop("door_knocking");
     }
 
     public override void OnUpdate()
