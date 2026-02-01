@@ -1063,7 +1063,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -0.0012817383, y: 873.4535}
+  m_AnchoredPosition: {x: -0.0018920898, y: 873.4535}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!222 &2588230371923513385
@@ -3142,7 +3142,7 @@ MonoBehaviour:
   documents: {fileID: 398674303894079905}
   lockedAudio: {fileID: 7305775122717456438}
   openAudio: {fileID: 735544871779585448}
-  passcode: 1234
+  passcode: 9953
 --- !u!1 &7004819090338746449
 GameObject:
   m_ObjectHideFlags: 0
@@ -3851,6 +3851,18 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 668487232486207720}
         m_TargetAssemblyTypeName: FolderManager, Assembly-CSharp
+        m_MethodName: UnlockFolder
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1611640328004803438}
+        m_TargetAssemblyTypeName: PasswordDialogue, Assembly-CSharp
         m_MethodName: UnlockFolder
         m_Mode: 0
         m_Arguments:

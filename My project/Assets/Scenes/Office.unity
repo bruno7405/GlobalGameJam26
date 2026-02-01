@@ -687,8 +687,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: '::'
   nextState: {fileID: 270904279}
   audioLog: debug_call
-  audioLength: 5
+  audioLength: 40
   computerManager: {fileID: 1004574936}
+  corkBoardManager: {fileID: 283501847}
 --- !u!1 &224267308
 GameObject:
   m_ObjectHideFlags: 0
@@ -931,7 +932,10 @@ GameObject:
   m_Component:
   - component: {fileID: 283501846}
   - component: {fileID: 283501847}
-  m_Layer: 0
+  - component: {fileID: 283501849}
+  - component: {fileID: 283501848}
+  - component: {fileID: 283501850}
+  m_Layer: 6
   m_Name: CorkboardDecorated (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -953,6 +957,7 @@ Transform:
   m_Children:
   - {fileID: 1272188283}
   - {fileID: 1491237838}
+  - {fileID: 325527925}
   m_Father: {fileID: 224267309}
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!114 &283501847
@@ -971,6 +976,56 @@ MonoBehaviour:
   - "Computer Passcode:  \t<b>3101</b>"
   - "Secretary Phone Number:  \t<b>123-445-6767</b>  "
   - "Audio Folder Passcode:  \t<b>9953</b> "
+--- !u!114 &283501848
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 283501845}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed7319c07d14f15488a20bf3f9c3bffc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
+  mainCinemaCam: {fileID: 54513525}
+  corkboardCam: {fileID: 325527924}
+--- !u!114 &283501849
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 283501845}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0edef075de6ea12409e7be9a607335ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ObjectHighlighter
+  highlightedColor: {r: 1, g: 1, b: 1, a: 1}
+  rendererParent: {fileID: 1272188282}
+  renderers: []
+--- !u!65 &283501850
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 283501845}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 70, y: 59.999996, z: 12.839632}
+  m_Center: {x: 0, y: 0, z: 3.919816}
 --- !u!1 &291170816
 GameObject:
   m_ObjectHideFlags: 0
@@ -1069,6 +1124,81 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1609198202616842138, guid: 1c7bae80a6be45a45b1ef8a266a6c8c0, type: 3}
   m_PrefabInstance: {fileID: 8990064371876882266}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &325527924
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 325527925}
+  - component: {fileID: 325527926}
+  m_Layer: 0
+  m_Name: BoardCinemachineCamera
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &325527925
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 325527924}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0.000013392419, y: 0.9990731, z: -0.043046165, w: -0.0003014207}
+  m_LocalPosition: {x: 2.2, y: 0.6, z: 20.4}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 283501846}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &325527926
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 325527924}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f9dfa5b682dcd46bda6128250e975f58, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.Cinemachine::Unity.Cinemachine.CinemachineCamera
+  Priority:
+    Enabled: 0
+    m_Value: 0
+  OutputChannel: 1
+  StandbyUpdate: 2
+  m_StreamingVersion: 20241001
+  m_LegacyPriority: 0
+  Target:
+    TrackingTarget: {fileID: 0}
+    LookAtTarget: {fileID: 0}
+    CustomLookAtTarget: 0
+  Lens:
+    FieldOfView: 60.000004
+    OrthographicSize: 5
+    NearClipPlane: 0.01
+    FarClipPlane: 1000
+    Dutch: 0
+    ModeOverride: 0
+    PhysicalProperties:
+      GateFit: 2
+      SensorSize: {x: 21.946, y: 16.002}
+      LensShift: {x: 0, y: 0}
+      FocusDistance: 10
+      Iso: 200
+      ShutterSpeed: 0.005
+      Aperture: 16
+      BladeCount: 5
+      Curvature: {x: 2, y: 11}
+      BarrelClipping: 0.25
+      Anamorphism: 0
+  BlendHint: 0
 --- !u!1 &331795410
 GameObject:
   m_ObjectHideFlags: 0
@@ -3208,6 +3338,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1272188283}
+  - component: {fileID: 1272188284}
   m_Layer: 0
   m_Name: Model
   m_TagString: Untagged
@@ -3270,6 +3401,27 @@ Transform:
   - {fileID: 1380203993}
   m_Father: {fileID: 283501846}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &1272188284
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1272188282}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!4 &1274961578 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3378023001221546442, guid: 492ca9beae85e1e478e8b4a6ca6d006e, type: 3}
@@ -6072,7 +6224,7 @@ MonoBehaviour:
   m_fontSizeMax: 72
   m_fontStyle: 0
   m_HorizontalAlignment: 1
-  m_VerticalAlignment: 512
+  m_VerticalAlignment: 256
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_characterHorizontalScale: 1
@@ -6103,7 +6255,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 18.3952, y: 13.051418, z: 18.552341, w: 11.720404}
+  m_margin: {x: 18.3952, y: 15.156853, z: 18.552341, w: 11.720404}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -7509,6 +7661,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1749392985}
     m_Modifications:
+    - target: {fileID: 1366158960596123001, guid: 1ede52d811c59e141bea620cbea12f07, type: 3}
+      propertyPath: corkboard
+      value: 
+      objectReference: {fileID: 283501847}
     - target: {fileID: 1366158960596123001, guid: 1ede52d811c59e141bea620cbea12f07, type: 3}
       propertyPath: mainCinemachineCam
       value: 

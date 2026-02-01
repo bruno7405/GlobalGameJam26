@@ -8,11 +8,13 @@ public class PapersInteractable : MonoBehaviour, IInteractable
 
     [SerializeField] GameObject mainCinemachineCam;
     [SerializeField] GameObject paperCinemachineCam;
+    public CorkBoardManager corkboard;
 
     public void OnInteract()
     {
         SwitchCamera(paperCinemachineCam);
         StartCoroutine(ShowUI());
+        corkboard.AddComputerPasscode();
     }
 
     public void OnInteractExit()

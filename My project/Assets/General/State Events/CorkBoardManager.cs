@@ -13,12 +13,32 @@ public class CorkBoardManager : MonoBehaviour
     {
         text = GetComponentInChildren<TextMeshProUGUI>();
         text.text = "";
-        AddText();
+        AddComputerPasscode();
     }
 
-    public void AddText()
+    public void AddComputerPasscode()
     {
+        text.text += logs[numLogs] + "\n";
         numLogs++;
-        text.text += logs[numLogs];
+    }
+
+    bool sPhone = false;
+    public void AddSecPhone()
+    {
+        if (!sPhone)
+        {
+            text.text += logs[1];
+            sPhone = true;
+        }
+    }
+
+    bool aCode = false;
+    public void AddAudCode()
+    {
+        if (!aCode)
+        {
+            text.text += logs[2];
+            aCode = true;
+        }
     }
 }
