@@ -4,12 +4,15 @@ public class EndingState : State
 {
     public override void GoToNextState()
     {
-        throw new System.NotImplementedException();
+        // I SHOULD NEVER BE CALLED :D
+        Debug.LogError("Ending state cannot progress further.");
+        //throw new System.NotImplementedException();
     }
 
     public override void OnStart()
     {
-        throw new System.NotImplementedException();
+        // Knocking event...
+        // Set grabbing the gun to close UI...
     }
 
     public override void OnUpdate()

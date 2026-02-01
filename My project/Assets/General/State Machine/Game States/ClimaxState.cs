@@ -2,14 +2,21 @@ using UnityEngine;
 
 public class ClimaxState : State
 {
+    public PhoneManager phoneManager;
+    public string susYellowCall = "debug_call";
+    public float callLength = 5f;
+    
     public override void GoToNextState()
     {
-        throw new System.NotImplementedException();
+        StateMachineManager.Instance.SetNewState(nextState);
     }
 
     public override void OnStart()
     {
-        throw new System.NotImplementedException();
+        Debug.Log("Yellow Phone 2 state started.");
+        phoneManager.StartRinger();
+        phoneManager.outgoingCallAudio = susYellowCall;
+        phoneManager.callLength = callLength;
     }
 
     public override void OnUpdate()
