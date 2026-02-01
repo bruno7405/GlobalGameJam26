@@ -22,6 +22,7 @@ public class PhoneInteractable : MonoBehaviour, IInteractable
         if (phoneManager.receivingCall) {
             if (StateMachineManager.Instance.currentState.GetType() == typeof(TutorialState)) phoneManager.PickUpCallTutorial();
             else if (StateMachineManager.Instance.currentState.GetType() == typeof(SecretaryCallsState)) phoneManager.PickUpCallSecretary();
+            else if (StateMachineManager.Instance.currentState.GetType() == typeof(ClimaxState)) phoneManager.PickUpCallYellow();
 
             SwitchCamera(phoneCinemachineCam);
         }

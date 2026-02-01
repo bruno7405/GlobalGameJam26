@@ -1,7 +1,13 @@
+using System.Collections;
 using UnityEngine;
 
 public class EndingState : State
 {
+    public Dialogue endingDialogue;
+    public float fadeToBlackTime = 1;
+    public string gunshotSound;
+    public float gunSoundTime = 3;
+
     public override void GoToNextState()
     {
         // I SHOULD NEVER BE CALLED :D
@@ -11,8 +17,24 @@ public class EndingState : State
 
     public override void OnStart()
     {
-        // Knocking event...
-        // Set grabbing the gun to close UI...
+        StartCoroutine(EndingSequence());
+    }
+
+    public IEnumerator EndingSequence()
+    {
+        BlackScreenUI.Instance.FadeToBlack();
+        yield return new WaitForSeconds(fadeToBlackTime);
+
+        AudioManager.instance.PlayOneShot(gunshotSound);
+        yield return new WaitForSeconds(gunSoundTime);
+
+        DialogueManager.Instance.StartDialogue(endingDialogue);
+        DialogueManager.Instance.onDialogFinished += SwapToCredits;
+    }
+
+    public void SwapToCredits()
+    {
+        
     }
 
     public override void OnUpdate()
