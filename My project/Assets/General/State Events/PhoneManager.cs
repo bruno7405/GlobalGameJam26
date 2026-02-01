@@ -42,7 +42,10 @@ public class PhoneManager : MonoBehaviour
         AudioManager.instance.PlayLoop("phone_ring");
     }
 
-    public void PickUpCall()
+    /// <summary>
+    /// Sequence for picking up the tutorial call
+    /// </summary>
+    public void PickUpCallTutorial()
     {
         if (phoneLock) return;
         phoneLock = true;
@@ -54,10 +57,11 @@ public class PhoneManager : MonoBehaviour
         AudioManager.instance.PlayOneShot(incomingCallAudio);
 
         DialogueManager.Instance.StartDialogue(tutorialDialogue);
-
-        // StartCoroutine(nameof(RunOutPhoneCall));
     }
 
+    /// <summary>
+    /// Sequence for calling the secretary 1
+    /// </summary>
     public void CallSecretary()
     {
         if (phoneLock) return;
@@ -68,9 +72,21 @@ public class PhoneManager : MonoBehaviour
     IEnumerator ICallSecretary()
     {
         AudioManager.instance.PlayOneShot(dialAudio);
-        yield return new WaitForSeconds(dialLength);
+        yield return new WaitForSeconds(3);
         AudioManager.instance.PlayOneShot(outgoingCallAudio);
-        StartCoroutine(nameof(RunOutPhoneCall));
+        DialogueManager.Instance.StartDialogue(secretaryDialogue);
+    }
+
+    public void PickUpCallSecretary()
+    {
+        if (phoneLock) return;
+        phoneLock = true;
+        PlayerMouse.active = false; // disables input
+        receivingCall = false;
+        
+        AudioManager.instance.StopLoop("phone_ring");
+        //AudioManager.instance.PlayOneShot(incomingCallAudio);
+        DialogueManager.Instance.StartDialogue(secretaryDialogue);
     }
 
     public void CallDud()
@@ -90,15 +106,6 @@ public class PhoneManager : MonoBehaviour
 
     private void FinishCall()
     {
-        StateMachineManager.Instance.currentState.GoToNextState();
-        phoneLock = false;
-        PlayerMouse.active = true; // enables input
-        phoneInteractable.OnInteractExit();
-    }
-
-    IEnumerator RunOutPhoneCall()
-    {
-        yield return new WaitForSeconds(callLength);
         StateMachineManager.Instance.currentState.GoToNextState();
         phoneLock = false;
         PlayerMouse.active = true; // enables input
