@@ -30,7 +30,7 @@ public class ComputerInteractable : MonoBehaviour, IInteractable
     private IEnumerator ShowComputerUI()
     {
         yield return new WaitForSeconds(1);
-        computerUI.SetActive(true);
+        //computerUI.SetActive(true);
     }
 
     private IEnumerator HideComputerUI()

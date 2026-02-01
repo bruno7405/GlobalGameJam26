@@ -32,13 +32,15 @@ public class DesktopManager : MonoBehaviour
     public void OpenLogFile(string file)
     {
         LogWindow lw = Instantiate(logWindowPrefab).GetComponent<LogWindow>();
+        lw.gameObject.SetActive(true);
         lw.gameObject.transform.SetParent(gameObject.transform);
         
         TextAsset textAsset = Resources.Load<TextAsset>(file);
         lw.textToDisplay = textAsset.text;
 
         RectTransform rt = lw.GetComponent<RectTransform>();
-        rt.anchoredPosition = new Vector2(0,0); 
-        rt.localScale = new Vector2(1,1);
+        rt.gameObject.transform.localPosition = logWindowPrefab.transform.localPosition;
+        rt.gameObject.transform.localScale = logWindowPrefab.transform.localScale;
+        rt.gameObject.transform.rotation = gameObject.transform.rotation;
     }
 }
