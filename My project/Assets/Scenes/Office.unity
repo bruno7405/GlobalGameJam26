@@ -2554,6 +2554,12 @@ MonoBehaviour:
     audioClip: {fileID: 8300000, guid: 827cd592c0fe9334d872ff19bd8c3e2b, type: 3}
     volume: 1
     pitch: 1
+    loop: 1
+    source: {fileID: 0}
+  - name: debug_call
+    audioClip: {fileID: 8300000, guid: 443696d255524cc4c860ff038a61ce4c, type: 3}
+    volume: 1
+    pitch: 1
     loop: 0
     source: {fileID: 0}
 --- !u!82 &1274961580
@@ -3343,8 +3349,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::IntroState
   stateMachine: {fileID: 0}
   parent: {fileID: 0}
-  phoneRinger: {fileID: 919132148157966821}
+  phoneManager: {fileID: 919132148157966822}
   timeBeforeRing: 5
+  tutorialCallAudio: debug_call
+  tutorialCallLength: 11
+  nextState: {fileID: 1442554272}
 --- !u!1 &1749392984
 GameObject:
   m_ObjectHideFlags: 0
@@ -4445,6 +4454,7 @@ GameObject:
   - component: {fileID: 919132148157966820}
   - component: {fileID: 919132148157966819}
   - component: {fileID: 919132148157966821}
+  - component: {fileID: 919132148157966822}
   m_Layer: 6
   m_Name: officephone
   m_TagString: Untagged
@@ -4492,6 +4502,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3227bc4fe55a2444cab7f85676030646, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
+--- !u!114 &919132148157966822
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 919132148157966818}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 489a390f1d41bf046a2646254c9f083c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
+  receivingCall: 0
+  audioDialogue: 
+  callLength: 0
 --- !u!4 &1038333035994987264
 Transform:
   m_ObjectHideFlags: 0

@@ -3,8 +3,12 @@ using UnityEngine;
 
 public class TutorialState : State
 {
-    public PhoneRinger phoneRinger;
+    public PhoneManager phoneManager;
     public float timeBeforeRing = 5f;
+    public string tutorialCallAudio = "debug_call";
+    public float tutorialCallLength = 11f;
+
+    public State nextState;
     
     public override void OnStart()
     {
@@ -17,11 +21,18 @@ public class TutorialState : State
     private IEnumerator sequencePhone()
     {
         yield return new WaitForSeconds(timeBeforeRing);
-        phoneRinger.StartRinger();
+        phoneManager.StartRinger();
+        phoneManager.audioDialogue = tutorialCallAudio;
+        phoneManager.callLength = tutorialCallLength;
     }
 
     public override void OnUpdate()
     {
         //throw new System.NotImplementedException();
+    }
+
+    public override void GoToNextState()
+    {
+        StateMachineManager.Instance.SetNewState(nextState);
     }
 }

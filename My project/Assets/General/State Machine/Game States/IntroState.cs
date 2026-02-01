@@ -2,6 +2,11 @@ using UnityEngine;
 
 public class IntroState : State
 {
+    public override void GoToNextState()
+    {
+        throw new System.NotImplementedException();
+    }
+
     public override void OnStart()
     {
         Debug.Log("Intro state started.");
