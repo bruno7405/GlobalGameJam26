@@ -31,7 +31,9 @@ public class ComputerManager : MonoBehaviour
 
     IEnumerator WaitForAudio()
     {
-        yield return new WaitForSeconds(audioLength);
-        StateMachineManager.Instance.currentState.GoToNextState();
+        yield return new WaitForSeconds(audioLength); //fix
+        if (StateMachineManager.Instance.currentState.GetType() == typeof(AudioLogState)) {
+            StateMachineManager.Instance.currentState.GoToNextState();
+        }
     }
 }

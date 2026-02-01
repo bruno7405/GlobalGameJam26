@@ -19,14 +19,10 @@ public class BottomChecker : MonoBehaviour
     {
         if (getRect.verticalNormalizedPosition <= 0.1)
         {
-            if (gameObject.transform.parent.transform.parent.name == "purpleReport" && 
-            StateMachineManager.Instance.currentState.GetType() == typeof(PurpReportState))
+            if (gameObject.transform.parent.transform.parent.name == "purpleReport" && StateMachineManager.Instance.currentState.GetType() == typeof(PurpReportState))
             {
                 StateMachineManager.Instance.currentState.GoToNextState();
             }
-            
-            // OnScrolledToBottom?.Invoke(gameObject.transform.parent.transform.parent.name); 
-            // Debug.Log(gameObject.transform.parent.transform.parent.name);
         }
     }
 }
