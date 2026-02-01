@@ -100,6 +100,18 @@ MonoBehaviour:
     pitch: 1
     loop: 0
     source: {fileID: 0}
+  - name: door_knocking
+    audioClip: {fileID: 8300000, guid: b29f230de241a494ab7fc0f05ddb75f9, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
+  - name: silver_shoot
+    audioClip: {fileID: 8300000, guid: 5f2dd39fa811e064db480a9dc9b88110, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
 --- !u!82 &3218319919320901156
 AudioSource:
   m_ObjectHideFlags: 0
