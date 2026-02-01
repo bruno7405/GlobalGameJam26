@@ -18,7 +18,7 @@ public class CorkBoardManager : MonoBehaviour
 
     public void AddComputerPasscode()
     {
-        text.text += logs[numLogs];
+        text.text += logs[numLogs] + "\n";
         numLogs++;
     }
 
