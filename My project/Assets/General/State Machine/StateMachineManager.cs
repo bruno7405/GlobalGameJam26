@@ -4,7 +4,7 @@ public class StateMachineManager : MonoBehaviour
 {
     public static StateMachineManager Instance;
     public State tutorialState;
-    [HideInInspector] public State currentState;
+    public State currentState;
 
 
     public void Awake()

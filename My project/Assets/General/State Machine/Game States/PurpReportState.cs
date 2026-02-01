@@ -11,6 +11,14 @@ public class PurpReportState : State
         //BottomChecker.OnScrolledToBottom -= HandleScrollBottom;
     }
 
+    public void TryGoNextState()
+    {
+        if (StateMachineManager.Instance.currentState.GetType() == typeof(PurpReportState))
+        {
+            GoToNextState();
+        }
+    }
+
     public override void OnStart()
     {
         purpleFile.SetActive(true);
