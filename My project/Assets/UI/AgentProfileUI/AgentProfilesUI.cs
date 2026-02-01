@@ -32,6 +32,7 @@ public class AgentProfilesUI : MonoBehaviour
             selectedProfileIndex = profiles.Count - 1;
         }
         profiles[selectedProfileIndex].SetActive(true);
+        AudioManager.instance.PlayOneShot("page_turn");
     }
 
     private void OnRightButtonClicked()
@@ -43,5 +44,6 @@ public class AgentProfilesUI : MonoBehaviour
             selectedProfileIndex = 0;
         }
         profiles[selectedProfileIndex].SetActive(true);
+        AudioManager.instance.PlayOneShot("page_turn");
     }
 }

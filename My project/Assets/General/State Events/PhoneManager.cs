@@ -6,6 +6,8 @@ public class PhoneManager : MonoBehaviour
 {
     [SerializeField] Dialogue tutorialDialogue;
     [SerializeField] Dialogue secretaryDialogue;
+    [SerializeField] Dialogue secretaryDialogue2;
+    [SerializeField] Dialogue yellowDialogue;
 
 
     [HideInInspector] public bool receivingCall = false;
@@ -85,8 +87,18 @@ public class PhoneManager : MonoBehaviour
         receivingCall = false;
         
         AudioManager.instance.StopLoop("phone_ring");
-        //AudioManager.instance.PlayOneShot(incomingCallAudio);
-        DialogueManager.Instance.StartDialogue(secretaryDialogue);
+        DialogueManager.Instance.StartDialogue(secretaryDialogue2);
+    }
+
+    public void PickUpCallYellow()
+    {
+        if (phoneLock) return;
+        phoneLock = true;
+        PlayerMouse.active = false; // disables input
+        receivingCall = false;
+
+        AudioManager.instance.StopLoop("phone_ring");
+        DialogueManager.Instance.StartDialogue(yellowDialogue);
     }
 
     public void CallDud()
@@ -106,6 +118,7 @@ public class PhoneManager : MonoBehaviour
 
     private void FinishCall()
     {
+        AudioManager.instance.PlayOneShot("hang_up");
         StateMachineManager.Instance.currentState.GoToNextState();
         phoneLock = false;
         PlayerMouse.active = true; // enables input

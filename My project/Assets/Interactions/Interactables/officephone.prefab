@@ -569,6 +569,28 @@ MonoBehaviour:
       let you know if I find anything else. *Hangs Up*
 
 '
+  secretaryDialogue2:
+    name: 
+    sentences:
+    - '[s]Agent SILVER, I just thought you should know PURPLE is back, and I just
+      received his mission report from ORANGE. I sent it over to you.'
+    - "[s]Check the folder with the other Mission Reports\u2014it should already
+      be there."
+    - '[Silver]Alright, thank you. I will read it.'
+  yellowDialogue:
+    name: 
+    sentences:
+    - "[Yellow]Hey, SILVER! How\u2019s the investigation going? ORANGE asked me to
+      check in with you."
+    - "[Silver]I can\u2019t tell if I am getting closer or chasing dead ends.\r\nWould
+      it be bad if I wished PINK was alive to report on what she saw?\r\n"
+    - "[Yellow]No, not at all. The stakes are high, and ORANGE wants results now.
+      Too bad she was shot\u2026\r\n"
+    - '[Silver](I never said she was shot)'
+    - '[Yellow]Anyways, I am on my way to your office, just like old times. See you
+      soon, SILVER.
+
+'
   receivingCall: 0
   incomingCallAudio: 
   outgoingCallAudio: 

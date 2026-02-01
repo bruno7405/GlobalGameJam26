@@ -82,6 +82,24 @@ MonoBehaviour:
     pitch: 1
     loop: 0
     source: {fileID: 0}
+  - name: hang_up
+    audioClip: {fileID: 8300000, guid: 167c3d24d4a09964a8bf2671f42b7b58, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: page_turn
+    audioClip: {fileID: 8300000, guid: 7430bfe940d4da54291404cc3b68131b, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: light_switch
+    audioClip: {fileID: 8300000, guid: f7fa8329bed2e2b4c8a828674ab4c924, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
 --- !u!82 &3218319919320901156
 AudioSource:
   m_ObjectHideFlags: 0

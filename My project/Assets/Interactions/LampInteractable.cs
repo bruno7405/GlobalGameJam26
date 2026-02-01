@@ -33,6 +33,9 @@ public class LampInteractable : MonoBehaviour, IInteractable
             isOn = true;
         }
 
+        AudioManager.instance.PlayOneShot("light_switch");
+
+
         OnInteractExit();
     }
 
