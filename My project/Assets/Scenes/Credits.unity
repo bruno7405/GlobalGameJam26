@@ -741,7 +741,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &227658175
 Transform:
   m_ObjectHideFlags: 0
@@ -6727,6 +6727,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GunInteractable
   handTransform: {fileID: 0}
+  gunCheckDialog:
+    name: 
+    sentences: []
 --- !u!4 &1038333035994987264
 Transform:
   m_ObjectHideFlags: 0
