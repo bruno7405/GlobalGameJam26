@@ -7,10 +7,13 @@ public class PlayerMouse : MonoBehaviour
     [SerializeField] LayerMask interactableMask;
     private Transform currentSelection;
 
+    public static bool canInteract;
     public static bool interacting;
 
     void Update()
     {
+        if (!canInteract) return;
+
         if (Keyboard.current.escapeKey.wasPressedThisFrame && currentSelection != null)
         {
             currentSelection.GetComponent<IInteractable>().OnInteractExit();
