@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class SecondPhoneState : State
+public class SecretaryCallsState : State
 {
     public PhoneManager phoneManager;
     public string secretarySecondCallAudio = "debug_call";

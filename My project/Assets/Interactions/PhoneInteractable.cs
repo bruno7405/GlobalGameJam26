@@ -20,7 +20,9 @@ public class PhoneInteractable : MonoBehaviour, IInteractable
         // Check if currently getting call
         // If not open UI normally
         if (phoneManager.receivingCall) {
-            phoneManager.PickUpCall();
+            if (StateMachineManager.Instance.currentState.GetType() == typeof(TutorialState)) phoneManager.PickUpCallTutorial();
+            else if (StateMachineManager.Instance.currentState.GetType() == typeof(SecretaryCallsState)) phoneManager.PickUpCallSecretary();
+
             SwitchCamera(phoneCinemachineCam);
         }
         else {
