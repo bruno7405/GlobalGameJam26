@@ -18,7 +18,7 @@ public class CorkBoardManager : MonoBehaviour
 
     public void AddText()
     {
-        numLogs++;
         text.text += logs[numLogs];
+        numLogs++;
     }
 }
