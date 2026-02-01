@@ -26,15 +26,21 @@ public class EndingState : State
         BlackScreenUI.Instance.FadeToBlack();
         yield return new WaitForSeconds(fadeToBlackTime);
 
-        AudioManager.instance.PlayOneShot(gunshotSound);
-        yield return new WaitForSeconds(gunSoundTime);
-
         DialogueManager.Instance.StartDialogue(endingDialogue);
         DialogueManager.Instance.onDialogFinished += SwapToCredits;
+
     }
 
     public void SwapToCredits()
     {
+        StartCoroutine(GoToCredits());
+    }
+
+    IEnumerator GoToCredits()
+    {
+        AudioManager.instance.PlayOneShot(gunshotSound);
+        yield return new WaitForSeconds(gunSoundTime);
+
         SceneManager.LoadScene("Credits");
     }
 
