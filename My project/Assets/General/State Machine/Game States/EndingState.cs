@@ -35,7 +35,7 @@ public class EndingState : State
 
     public void SwapToCredits()
     {
-        //SceneManager.LoadScene();
+        SceneManager.LoadScene("Credits");
     }
 
     public override void OnUpdate()
