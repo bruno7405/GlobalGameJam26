@@ -7,7 +7,7 @@ public class PlayerMouse : MonoBehaviour
     [SerializeField] LayerMask interactableMask;
     private Transform currentSelection;
 
-    public static bool canInteract;
+    public static bool canInteract = true;
     public static bool interacting;
 
     void Update()

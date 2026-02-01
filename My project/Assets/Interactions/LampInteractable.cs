@@ -17,18 +17,14 @@ public class LampInteractable : MonoBehaviour, IInteractable
     public void OnInteract()
     {
         Debug.Log("Interacted with Lamp");
-        if (isOn)
+        if (isOn) // Turn off the lamp
         {
-            Debug.Log("Turning off the lamp");
-            // Turn off the lamp
             lampLight.enabled = false;
             bulbMaterial.DisableKeyword("_EMISSION");
             isOn = false;
         }
-        else
+        else // Turn on the lamp
         {
-            Debug.Log("Turning on the lamp");
-            // Turn on the lamp
             lampLight.enabled = true;
             //We need to enable the EMISSION
             bulbMaterial.EnableKeyword("_EMISSION");
