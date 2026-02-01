@@ -686,8 +686,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   nextState: {fileID: 270904279}
-  audioLog: debug_call
-  audioLength: 10
+  audioLog: audio_log
+  audioLength: 43
   computerManager: {fileID: 1004574936}
   corkBoardManager: {fileID: 283501847}
 --- !u!1 &224267308
@@ -8436,6 +8436,46 @@ PrefabInstance:
     - target: {fileID: 1350573553879134235, guid: 1608c7327e9782b43804ccadf1e7213c, type: 3}
       propertyPath: m_Name
       value: officephone
+      objectReference: {fileID: 0}
+    - target: {fileID: 3089852574515408608, guid: 1608c7327e9782b43804ccadf1e7213c, type: 3}
+      propertyPath: m_Type
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3089852574515408608, guid: 1608c7327e9782b43804ccadf1e7213c, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 6c19e7a9203aa574c855d672bdda5a18, type: 3}
+    - target: {fileID: 3742588506259146082, guid: 1608c7327e9782b43804ccadf1e7213c, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3742588506259146082, guid: 1608c7327e9782b43804ccadf1e7213c, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3742588506259146082, guid: 1608c7327e9782b43804ccadf1e7213c, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3742588506259146082, guid: 1608c7327e9782b43804ccadf1e7213c, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5145386693461285946, guid: 1608c7327e9782b43804ccadf1e7213c, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5145386693461285946, guid: 1608c7327e9782b43804ccadf1e7213c, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5145386693461285946, guid: 1608c7327e9782b43804ccadf1e7213c, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5145386693461285946, guid: 1608c7327e9782b43804ccadf1e7213c, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6665524096035752728, guid: 1608c7327e9782b43804ccadf1e7213c, type: 3}
       propertyPath: mainCinemachineCam
