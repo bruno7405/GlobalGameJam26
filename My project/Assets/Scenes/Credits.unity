@@ -4614,6 +4614,11 @@ MonoBehaviour:
   phoneManager: {fileID: 919132148157966822}
   secretaryCallAudio: debug_call
   secretaryCallLength: 5
+--- !u!1 &1466438187 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5653564016487379633, guid: 1c7bae80a6be45a45b1ef8a266a6c8c0, type: 3}
+  m_PrefabInstance: {fileID: 8990064371876882266}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1491237837
 GameObject:
   m_ObjectHideFlags: 0
@@ -5893,7 +5898,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1953429170
 RectTransform:
   m_ObjectHideFlags: 0
@@ -9584,7 +9589,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5653564016487379633, guid: 1c7bae80a6be45a45b1ef8a266a6c8c0, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5694268639859286395, guid: 1c7bae80a6be45a45b1ef8a266a6c8c0, type: 3}
       propertyPath: m_AnchorMax.y
@@ -9692,12 +9697,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 17bd9e1dc5034dc4fafda232a3c7ea07, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  title: {fileID: 0}
-  creators: {fileID: 0}
-  developers: {fileID: 0}
-  writers: {fileID: 0}
-  arts: {fileID: 0}
-  usedAssets: {fileID: 0}
+  title: {fileID: 1466438187}
+  creators: {fileID: 1953429169}
 --- !u!224 &8990064371876882269 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 7435602567628434934, guid: 1c7bae80a6be45a45b1ef8a266a6c8c0, type: 3}
