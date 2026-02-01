@@ -687,7 +687,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: '::'
   nextState: {fileID: 270904279}
   audioLog: debug_call
-  audioLength: 40
+  audioLength: 10
   computerManager: {fileID: 1004574936}
   corkBoardManager: {fileID: 283501847}
 --- !u!1 &224267308
@@ -1140,7 +1140,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &325527925
 Transform:
   m_ObjectHideFlags: 0
@@ -1997,6 +1997,118 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 522843602}
   m_Mesh: {fileID: -7994028316772081947, guid: 9d6e660f6d7934c4481ea230449eed4c, type: 3}
+--- !u!1 &528385833
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 528385834}
+  - component: {fileID: 528385837}
+  - component: {fileID: 528385836}
+  - component: {fileID: 528385835}
+  m_Layer: 0
+  m_Name: Hand
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &528385834
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 528385833}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: 0.99985695, z: -0, w: -0.016918343}
+  m_LocalPosition: {x: -0.31, y: -0.025, z: 0.061}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 1
+  m_Children: []
+  m_Father: {fileID: 543910921}
+  m_LocalEulerAnglesHint: {x: 0, y: 181.939, z: 0}
+--- !u!65 &528385835
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 528385833}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!23 &528385836
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 528385833}
+  m_Enabled: 0
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
+  m_ForceMeshLod: -1
+  m_MeshLodSelectionBias: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_GlobalIlluminationMeshLod: 0
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_MaskInteraction: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &528385837
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 528385833}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &543910919
 GameObject:
   m_ObjectHideFlags: 0
@@ -2042,7 +2154,8 @@ Transform:
   m_LocalPosition: {x: -0.33891, y: 0.51398, z: 0.03484}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 528385834}
   m_Father: {fileID: 1722915890}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &637223230
@@ -6640,17 +6753,12 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3907645943708630558}
   m_Mesh: {fileID: 6331699949393592215, guid: 4441eaaeb6b1ae641a21c0d4c826b46d, type: 3}
---- !u!1 &919132148157966818 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1350573553879134235, guid: 1608c7327e9782b43804ccadf1e7213c, type: 3}
-  m_PrefabInstance: {fileID: 6849836210083013609}
-  m_PrefabAsset: {fileID: 0}
 --- !u!114 &919132148157966822 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7711266645106877979, guid: 1608c7327e9782b43804ccadf1e7213c, type: 3}
   m_PrefabInstance: {fileID: 6849836210083013609}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 919132148157966818}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 489a390f1d41bf046a2646254c9f083c, type: 3}
@@ -6669,7 +6777,7 @@ GameObject:
   - component: {fileID: 919132148557117374}
   - component: {fileID: 919132148557117377}
   - component: {fileID: 919132148557117376}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: SimpleRevolver
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6689,7 +6797,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ObjectHighlighter
   highlightedColor: {r: 1, g: 1, b: 1, a: 1}
-  rendererParent: {fileID: 919132148157966818}
+  rendererParent: {fileID: 919132148557117373}
   renderers: []
 --- !u!65 &919132148557117375
 BoxCollider:
@@ -6710,8 +6818,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.75900036, y: 1.6384393, z: 1}
-  m_Center: {x: 0.12050033, y: -0.023542877, z: -7.303368e-10}
+  m_Size: {x: 1.1178565, y: 2.4179356, z: 3.8261032}
+  m_Center: {x: -0.05892774, y: 0.32051656, z: 1.4130508}
 --- !u!114 &919132148557117376
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6736,6 +6844,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 65f17fce51b07544a9ee5f54b255d1a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GunInteractable
+  handTransform: {fileID: 528385834}
 --- !u!4 &1038333035994987264
 Transform:
   m_ObjectHideFlags: 0
