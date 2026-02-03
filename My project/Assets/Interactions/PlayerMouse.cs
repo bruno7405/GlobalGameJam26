@@ -14,7 +14,7 @@ public class PlayerMouse : MonoBehaviour
     {
         if (!active) return;
 
-        if (Keyboard.current.escapeKey.wasPressedThisFrame && currentSelection != null)
+        if ((Keyboard.current.escapeKey.wasPressedThisFrame || Keyboard.current.qKey.wasPressedThisFrame) && currentSelection != null)
         {
             currentSelection.GetComponent<IInteractable>().OnInteractExit();
             currentSelection = null;
