@@ -6,7 +6,7 @@ public class AudioLogState : State
     public float audioLength = 5; // Change this to match the length of the audio log, phone will ring after
 
     public ComputerManager computerManager;
-    public CorkBoardManager corkBoardManager;
+    public CorkBoardUI corkBoardManager;
     
     public override void GoToNextState()
     {
@@ -16,14 +16,12 @@ public class AudioLogState : State
     public override void OnStart()
     {
         Debug.Log("Audio State!");
-        corkBoardManager.AddAudCode();
+        corkBoardManager.ShowAudioCode();
         computerManager.audioFile = audioLog;
         computerManager.audioLength = audioLength;
-        //throw new System.NotImplementedException();
     }
 
     public override void OnUpdate()
     {
-        //throw new System.NotImplementedException();
     }
 }

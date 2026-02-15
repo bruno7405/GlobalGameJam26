@@ -101,17 +101,19 @@ public class DialogueManager : MonoBehaviour
                 dialogueText.color = colors[6];
                 break;
             case "silver":
-                dialogueText.color = colors[7];
+                dialogueText.color = Color.white;
+                sentence = sentence.Substring(i + 2);
                 break;
-            case "s":
+            case "secretary":
                 dialogueText.color = Color.ghostWhite;
                 break;
             default:
-                dialogueText.color = Color.ghostWhite;
+                dialogueText.color = Color.white;
+                sentence = sentence.Substring(i + 2);
                 break;
         }
 
-        sentence = sentence.Substring(i + 1);
+        
 
         foreach (char letter in sentence.ToCharArray())
         {

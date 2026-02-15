@@ -6671,8 +6671,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Computer Passcode:\t(DEBUG) \n\t<b>3101</b> \r\nSecretary Phone Number:
-    \n\t<b>123-445-6767</b>  \r\nAudio Folder Passcode: \n\t<b>9953</b> \r\n"
+  m_text: "Computer Passcode: <b>3101</b>\n \r\nSecretary Phone Number: \n<b>123-445-6767</b> 
+    \n\r\nAudio Folder Passcode: <b>9953</b> \r\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: b5cee936ceeb6a24c9e1a2c3d9dc9bc1, type: 2}
   m_sharedMaterial: {fileID: -8066412884110212470, guid: b5cee936ceeb6a24c9e1a2c3d9dc9bc1, type: 2}
@@ -7271,6 +7271,22 @@ PrefabInstance:
     - target: {fileID: 378084996991165000, guid: 4a2289b4b8383d744afa22797eace8c9, type: 3}
       propertyPath: m_Name
       value: DialogueUI
+      objectReference: {fileID: 0}
+    - target: {fileID: 3949383100644907977, guid: 4a2289b4b8383d744afa22797eace8c9, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: -100
+      objectReference: {fileID: 0}
+    - target: {fileID: 3949383100644907977, guid: 4a2289b4b8383d744afa22797eace8c9, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6318004075371923092, guid: 4a2289b4b8383d744afa22797eace8c9, type: 3}
+      propertyPath: m_margin.x
+      value: 250
+      objectReference: {fileID: 0}
+    - target: {fileID: 6318004075371923092, guid: 4a2289b4b8383d744afa22797eace8c9, type: 3}
+      propertyPath: m_margin.z
+      value: 250
       objectReference: {fileID: 0}
     - target: {fileID: 9189710320887866885, guid: 4a2289b4b8383d744afa22797eace8c9, type: 3}
       propertyPath: m_Pivot.x
@@ -8481,6 +8497,104 @@ PrefabInstance:
       propertyPath: mainCinemachineCam
       value: 
       objectReference: {fileID: 54513525}
+    - target: {fileID: 7711266645106877979, guid: 1608c7327e9782b43804ccadf1e7213c, type: 3}
+      propertyPath: 'yellowDialogue.sentences.Array.data[0]'
+      value: "[Yellow] Hey, SILVER! How\u2019s the investigation going? ORANGE asked
+        me to check in with you."
+      objectReference: {fileID: 0}
+    - target: {fileID: 7711266645106877979, guid: 1608c7327e9782b43804ccadf1e7213c, type: 3}
+      propertyPath: 'yellowDialogue.sentences.Array.data[1]'
+      value: "[Silver] I can\u2019t tell if I am getting closer or chasing dead ends.\r\nWould
+        it be bad if I wished PINK was alive to report on what she saw?\r\n"
+      objectReference: {fileID: 0}
+    - target: {fileID: 7711266645106877979, guid: 1608c7327e9782b43804ccadf1e7213c, type: 3}
+      propertyPath: 'yellowDialogue.sentences.Array.data[2]'
+      value: "[Yellow] No, not at all. The stakes are high, and ORANGE wants results
+        now. Too bad she was shot\u2026\r\n"
+      objectReference: {fileID: 0}
+    - target: {fileID: 7711266645106877979, guid: 1608c7327e9782b43804ccadf1e7213c, type: 3}
+      propertyPath: 'yellowDialogue.sentences.Array.data[3]'
+      value: '[Silver] (I never said she was shot)'
+      objectReference: {fileID: 0}
+    - target: {fileID: 7711266645106877979, guid: 1608c7327e9782b43804ccadf1e7213c, type: 3}
+      propertyPath: 'yellowDialogue.sentences.Array.data[4]'
+      value: '[Yellow] Anyways, I am on my way to your office, just like old times.
+        See you soon, SILVER.
+
+'
+      objectReference: {fileID: 0}
+    - target: {fileID: 7711266645106877979, guid: 1608c7327e9782b43804ccadf1e7213c, type: 3}
+      propertyPath: 'tutorialDialogue.sentences.Array.data[0]'
+      value: '[Yellow] The last mission was a disaster, and the feds showed up.'
+      objectReference: {fileID: 0}
+    - target: {fileID: 7711266645106877979, guid: 1608c7327e9782b43804ccadf1e7213c, type: 3}
+      propertyPath: 'tutorialDialogue.sentences.Array.data[1]'
+      value: '[Yellow] ORANGE suspects we have a mole in our ranks.'
+      objectReference: {fileID: 0}
+    - target: {fileID: 7711266645106877979, guid: 1608c7327e9782b43804ccadf1e7213c, type: 3}
+      propertyPath: 'tutorialDialogue.sentences.Array.data[2]'
+      value: '[Silver] A mole? What happened?'
+      objectReference: {fileID: 0}
+    - target: {fileID: 7711266645106877979, guid: 1608c7327e9782b43804ccadf1e7213c, type: 3}
+      propertyPath: 'tutorialDialogue.sentences.Array.data[3]'
+      value: '[Yellow] I sent over the files you need to start the case. They should
+        already be on your computer.'
+      objectReference: {fileID: 0}
+    - target: {fileID: 7711266645106877979, guid: 1608c7327e9782b43804ccadf1e7213c, type: 3}
+      propertyPath: 'tutorialDialogue.sentences.Array.data[4]'
+      value: '[Yellow] Your new secretary should have left you the password somewhere,
+        probably under your agent file.'
+      objectReference: {fileID: 0}
+    - target: {fileID: 7711266645106877979, guid: 1608c7327e9782b43804ccadf1e7213c, type: 3}
+      propertyPath: 'tutorialDialogue.sentences.Array.data[5]'
+      value: '[Silver] Alright. *sigh* If you were still here, my work would be so
+        much easier.'
+      objectReference: {fileID: 0}
+    - target: {fileID: 7711266645106877979, guid: 1608c7327e9782b43804ccadf1e7213c, type: 3}
+      propertyPath: 'tutorialDialogue.sentences.Array.data[6]'
+      value: '[Yellow] What can I say, I wanted to go out and see the action for
+        myself. Alright catch you later.'
+      objectReference: {fileID: 0}
+    - target: {fileID: 7711266645106877979, guid: 1608c7327e9782b43804ccadf1e7213c, type: 3}
+      propertyPath: 'secretaryDialogue.sentences.Array.data[0]'
+      value: "[Silver] Hey, I found your number in my file. I\u2019ve been looking
+        through the files YELLOW sent me, and the reports don\u2019t line up."
+      objectReference: {fileID: 0}
+    - target: {fileID: 7711266645106877979, guid: 1608c7327e9782b43804ccadf1e7213c, type: 3}
+      propertyPath: 'secretaryDialogue.sentences.Array.data[1]'
+      value: '[Silver] I need to figure out what happened to PINK and where PURPLE
+        is. Do you have anything that could help me?
+
+'
+      objectReference: {fileID: 0}
+    - target: {fileID: 7711266645106877979, guid: 1608c7327e9782b43804ccadf1e7213c, type: 3}
+      propertyPath: 'secretaryDialogue.sentences.Array.data[2]'
+      value: "[Secretary] Agent SILVER. I believe we retrieved the Mission Audio
+        Logs from PURPLE\u2019s van. That would contain the transcript of what the
+        agents said over the radio."
+      objectReference: {fileID: 0}
+    - target: {fileID: 7711266645106877979, guid: 1608c7327e9782b43804ccadf1e7213c, type: 3}
+      propertyPath: 'secretaryDialogue.sentences.Array.data[4]'
+      value: '[Secretary] Already did, Agent. The access code is <color=red>9953</color>.
+        I will let you know if I find anything else. *Hangs Up*
+
+'
+      objectReference: {fileID: 0}
+    - target: {fileID: 7711266645106877979, guid: 1608c7327e9782b43804ccadf1e7213c, type: 3}
+      propertyPath: 'secretaryDialogue2.sentences.Array.data[0]'
+      value: '[Secretary] Agent SILVER, I just thought you should know PURPLE is
+        back, and I just received his mission report from ORANGE. I sent it over
+        to you.'
+      objectReference: {fileID: 0}
+    - target: {fileID: 7711266645106877979, guid: 1608c7327e9782b43804ccadf1e7213c, type: 3}
+      propertyPath: 'secretaryDialogue2.sentences.Array.data[1]'
+      value: "[Secretary] Check the folder with the other Mission Reports\u2014it
+        should already be there."
+      objectReference: {fileID: 0}
+    - target: {fileID: 7711266645106877979, guid: 1608c7327e9782b43804ccadf1e7213c, type: 3}
+      propertyPath: 'secretaryDialogue2.sentences.Array.data[2]'
+      value: '[Silver] Alright, thank you. I will read it.'
+      objectReference: {fileID: 0}
     - target: {fileID: 8728469275780263977, guid: 1608c7327e9782b43804ccadf1e7213c, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.335

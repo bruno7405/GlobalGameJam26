@@ -20,7 +20,6 @@ public class PlayerMouse : MonoBehaviour
             currentSelection = null;
         }
 
-        Debug.Log(interacting);
         if (interacting) return;
 
         // Calculate mouse point ray

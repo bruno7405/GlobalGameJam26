@@ -1,29 +1,29 @@
 using TMPro;
 using UnityEngine;
 
-public class CorkBoardManager : MonoBehaviour
+public class CorkBoardUI : MonoBehaviour
 {
     TextMeshProUGUI text;
     
     public string[] logs;
     int numLogs = 0;
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         text = GetComponentInChildren<TextMeshProUGUI>();
         text.text = "";
-        AddComputerPasscode();
+        ShowComputerPasscode();
     }
 
-    public void AddComputerPasscode()
+    public void ShowComputerPasscode()
     {
+        text.text = "";
         text.text += logs[numLogs] + "\n";
         numLogs++;
     }
 
     bool sPhone = false;
-    public void AddSecPhone()
+    public void ShowSecondPhoneNumber()
     {
         if (!sPhone)
         {
@@ -33,7 +33,7 @@ public class CorkBoardManager : MonoBehaviour
     }
 
     bool aCode = false;
-    public void AddAudCode()
+    public void ShowAudioCode()
     {
         if (!aCode)
         {
