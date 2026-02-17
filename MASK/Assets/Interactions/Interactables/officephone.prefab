@@ -250,9 +250,9 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 3519747077451841027}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 555, y: -225.10689}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 30, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8893023824591938709
@@ -283,8 +283,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: 6c19e7a9203aa574c855d672bdda5a18, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -543,52 +543,54 @@ MonoBehaviour:
   tutorialDialogue:
     name: 
     sentences:
-    - '[Yellow]Yellow reporting in. The last mission was a disaster, and the feds
-      showed up.'
-    - '[Yellow]ORANGE suspects we have a mole in our ranks.'
-    - '[Silver]A mole? What happened?'
-    - '[Yellow]I sent over the files you need to start the case. They should already
+    - '[Yellow] The last mission was a disaster, and the feds showed up.'
+    - '[Yellow] ORANGE suspects we have a mole in our ranks.'
+    - '[Silver] A mole? What happened?'
+    - '[Yellow] I sent over the files you need to start the case. They should already
       be on your computer.'
-    - '[Yellow]Your new secretary should have left you the password somewhere.'
-    - '[Silver]Alright. *sigh* If you were still here, my work would be so much easier.'
-    - '[Yellow]What can I say, I wanted to go out and see the action for myself.
-      Alright catch you later *Hangs up*'
+    - '[Yellow] Your new secretary should have left you the password somewhere, probably
+      under your agent file.'
+    - '[Silver] Alright. *sigh* If you were still here, my work would be so much
+      easier.'
+    - '[Yellow] What can I say, I wanted to go out and see the action for myself.
+      Alright catch you later.'
   secretaryDialogue:
     name: 
     sentences:
-    - "[Silver]Hey, I found your number in my file. I\u2019ve been looking through
+    - "[Silver] Hey, I found your number in my file. I\u2019ve been looking through
       the files YELLOW sent me, and the reports don\u2019t line up."
-    - '[Silver]I need to figure out what happened to PINK and where PURPLE is. Do
+    - '[Silver] I need to figure out what happened to PINK and where PURPLE is. Do
       you have anything that could help me?
 
 '
-    - "[s] Agent SILVER. I believe we retrieved the Mission Audio Logs from PURPLE\u2019s
-      van. That would contain the transcript of what the agents said over the radio."
+    - "[Secretary] Agent SILVER. I believe we retrieved the Mission Audio Logs from
+      PURPLE\u2019s van. That would contain the transcript of what the agents said
+      over the radio."
     - '[Silver] Yeah, that actually sounds useful. When can you send them over?'
-    - '[s]Already did, Agent. The access code is <color=red>9953</color>. I will
-      let you know if I find anything else. *Hangs Up*
+    - '[Secretary] Already did, Agent. The access code is <color=red>9953</color>.
+      I will let you know if I find anything else. *Hangs Up*
 
 '
   secretaryDialogue2:
     name: 
     sentences:
-    - '[s]Agent SILVER, I just thought you should know PURPLE is back, and I just
-      received his mission report from ORANGE. I sent it over to you.'
-    - "[s]Check the folder with the other Mission Reports\u2014it should already
-      be there."
-    - '[Silver]Alright, thank you. I will read it.'
+    - '[Secretary] Agent SILVER, I just thought you should know PURPLE is back, and
+      I just received his mission report from ORANGE. I sent it over to you.'
+    - "[Secretary] Check the folder with the other Mission Reports\u2014it should
+      already be there."
+    - '[Silver] Alright, thank you. I will read it.'
   yellowDialogue:
     name: 
     sentences:
-    - "[Yellow]Hey, SILVER! How\u2019s the investigation going? ORANGE asked me to
-      check in with you."
-    - "[Silver]I can\u2019t tell if I am getting closer or chasing dead ends.\r\nWould
+    - "[Yellow] Hey, SILVER! How\u2019s the investigation going? ORANGE asked me
+      to check in with you."
+    - "[Silver] I can\u2019t tell if I am getting closer or chasing dead ends.\r\nWould
       it be bad if I wished PINK was alive to report on what she saw?\r\n"
-    - "[Yellow]No, not at all. The stakes are high, and ORANGE wants results now.
+    - "[Yellow] No, not at all. The stakes are high, and ORANGE wants results now.
       Too bad she was shot\u2026\r\n"
-    - '[Silver](I never said she was shot)'
-    - '[Yellow]Anyways, I am on my way to your office, just like old times. See you
-      soon, SILVER.
+    - '[Silver] (I never said she was shot)'
+    - '[Yellow] Anyways, I am on my way to your office, just like old times. See
+      you soon, SILVER.
 
 '
   receivingCall: 0
@@ -840,9 +842,9 @@ RectTransform:
   - {fileID: 5049002990999875615}
   m_Father: {fileID: 3519747077451841027}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 380, y: -225.10689}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 300, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1213809296314323744
@@ -1654,7 +1656,7 @@ MonoBehaviour:
   m_fontColor32:
     serializedVersion: 2
     rgba: 2156035953
-  m_fontColor: {r: 0.44313726, g: 0.49803922, b: 0.50980395, a: 0.5019608}
+  m_fontColor: {r: 1, g: 1, b: 1, a: 0.5019608}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:

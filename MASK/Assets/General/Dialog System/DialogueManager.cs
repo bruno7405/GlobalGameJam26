@@ -75,7 +75,6 @@ public class DialogueManager : MonoBehaviour
             c = sentence[++i];
         }
 
-        Debug.Log(color);
         color = color.ToLower();
         switch (color)
         {

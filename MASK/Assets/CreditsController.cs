@@ -1,5 +1,6 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class CreditsController : MonoBehaviour
 {
@@ -12,11 +13,12 @@ public class CreditsController : MonoBehaviour
 
     IEnumerator CreditsSequence()
     {
-        yield return new WaitForSeconds(8);
+        yield return new WaitForSeconds(1.5f);
         title.SetActive(false);
         creators.SetActive(true);
         yield return new WaitForSeconds(8);
-        Application.Quit();
-        Debug.Log("QUIT THE GAME YA");
+        BlackScreenUI.Instance.FadeToBlack();
+        yield return new WaitForSeconds(1);
+        SceneManager.LoadScene(0);
     }
 }

@@ -31,6 +31,11 @@ public class AudioManager : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Play one shot sound given name
+    /// </summary>
+    /// <param name="name"></param>
+    /// <param name="pitchRandomization"></param>
     public void PlayOneShot(string name, float pitchRandomization = 0)
     {
         Sound s = Array.Find(sounds, sound => sound.name == name);
@@ -40,10 +45,41 @@ public class AudioManager : MonoBehaviour
             return;
         }
 
-        //Debug.Log("Playing sound!");
-
         if (pitchRandomization != 0) s.source.pitch = UnityEngine.Random.Range(1 - pitchRandomization, 1 + pitchRandomization); ;
         s.source.PlayOneShot(s.audioClip);
+    }
+
+    public void Play(string name, float pitchRandomization = 0)
+    {
+        Sound s = Array.Find(sounds, sound => sound.name == name);
+        
+        if (s == null)
+        {
+            Debug.LogWarning("Sound " + name + "' not found!");
+            return;
+        }
+
+        else if (s.source.isPlaying) return;
+
+        if (pitchRandomization != 0) s.source.pitch = UnityEngine.Random.Range(1 - pitchRandomization, 1 + pitchRandomization); ;
+        s.source.Play();
+    }
+
+    /// <summary>
+    /// Stops specified source from playing
+    /// </summary>
+    /// <param name="name"> name of source </param>
+    public void StopSource(string name)
+    {
+        Sound s = Array.Find(sounds, sound => sound.name == name);
+
+        if (s == null)
+        {
+            Debug.LogWarning("Sound " + name + "' not found!");
+            return;
+        }
+
+        s.source.Stop();
     }
 
     public void PlayLoop(string name)
